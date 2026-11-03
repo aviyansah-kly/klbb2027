@@ -638,7 +638,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .site-header .main-nav a { font-size:14px; white-space:nowrap }
   .site-header .nav-cta { display:flex; min-height:44px; font-size:11px; padding:8px 14px; margin-left:5px }
   .hero-figma { height:750px; min-height:0; padding:0 }
-  .hero-central { width:min(95%,540px); left:50%; top:20%; transform:translateX(-50%) }
+  .hero-central { width:min(95%,540px); left:50%; top:clamp(70px,calc(550px - 80vw),150px); transform:translateX(-50%) }
   .card-noah { --scatter-x:9%; --scatter-y:-16% }
   .card-syahrini { --scatter-x:-50%; --scatter-y:-10% }
   .card-hindia { --scatter-x:8%; --scatter-y:39% }
