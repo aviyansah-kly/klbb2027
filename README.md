@@ -12,6 +12,6 @@ This repository is a separate working copy. The original ChatGPT Sites project r
 ## Current preview state
 
 - Rundown: two-day interactive schedule with proposed WIB time slots; organizer confirmation is still required before treating the schedule as final.
-- Food Market: one-row scrolling tenant carousel on the home page, linking to `dist/tenants.html` with searchable 39-tenant index.
+- Food Market: eight featured tenant logos and names in a fixed 4-column × 2-row desktop grid (responsive to 2 columns on mobile), with no horizontal scrolling. The CTA below the grid links to `dist/tenants.html` with a searchable 39-tenant index.
 - Tenant names/logos: reference assets from KLBB 2026 Figma; **not a confirmed 2027 tenant lineup**. Three original wordmarks were provided as text rather than image logos. Order links are intentionally not published until official URLs are confirmed.
 - Source: continue editing `dist/`. Cloudflare Pages should use `dist` as its output directory.
