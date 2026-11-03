@@ -631,8 +631,8 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .site-header { top:14px }
   .site-header.is-scrolled { top:8px }
   .site-header .nav-wrap { width:calc(100% - 24px); height:56px; padding:7px 13px }
-  .site-header .brand { min-width:51px; height:auto }
-  .site-header .brand img { width:51px; height:auto }
+  .site-header .brand { min-width:76px; height:auto }
+  .site-header .brand img { width:76px; height:auto }
   .site-header .menu-toggle { flex-basis:44px; width:44px; height:44px }
   .site-header .main-nav { margin:0; top:calc(100% + 10px) }
   .site-header .main-nav a { font-size:14px; white-space:nowrap }
@@ -646,8 +646,8 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .card-naykilla { --scatter-x:53%; --scatter-y:-5% }
   .hero-figma-stage .hero-corner { width:63%; top:-12%; left:-26% }
   .hero-figma-stage .hero-plant { width:46%; top:67%; left:73% }
-  .hero-figma-stage .hero-drummer { width:52%; left:-16%; top:64% }
-  .hero-figma-stage .hero-drum-shadow { width:54%; left:-15%; top:97% }
+  .hero-figma-stage .hero-drummer { width:49%; left:1%; top:63% }
+  .hero-figma-stage .hero-drum-shadow { width:48%; left:1%; top:85% }
   .hero-figma-stage .hero-bolt-left { left:-2%; top:30%; width:20% }
   .hero-figma-stage .hero-bolt-right { left:81%; top:38%; width:19% }
   .hero-figma-stage .hero-spark-1 { left:7%; top:56%; width:6% }
@@ -665,11 +665,15 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .hero-figma-stage .hero-decor-right-gold { left:66%; top:90%; width:92% }
   .hero-figma-stage .hero-decor-right-leaves { left:68%; top:67%; width:86% }
   .hero-figma-stage .hero-decor-right-edge { left:93%; top:32%; width:20% }
-  .hero-date-line { gap:5px; font-size:clamp(10px,2.7vw,15px); letter-spacing:-.055em }
+  .hero-date-line { top:66%; left:0; width:100%; min-height:0; flex-wrap:wrap; gap:1px 8px; white-space:normal; font-size:clamp(13px,3.7vw,16px); letter-spacing:-.045em }
+  .hero-date-line strong:last-child { flex-basis:100% }
   .hero-year-bubbles { gap:2px }
-  .hero-year-bubbles b { width:clamp(24px,7vw,37px); height:clamp(24px,7vw,37px); font-size:clamp(12px,3vw,17px) }
-  .hero-extra-banner p { font-size:clamp(7px,1.75vw,10px); margin:0 3%; letter-spacing:-.055em }
-  .hero-ticket-sticker span { font-size:clamp(12px,3.6vw,17px) }
+  .hero-year-bubbles b { width:clamp(29px,8vw,35px); height:clamp(29px,8vw,35px); font-size:clamp(14px,4vw,18px) }
+  .hero-extra-banner { left:1%; top:82%; width:98%; height:12% }
+  .hero-extra-banner p { font-size:clamp(9px,2.6vw,11px); margin:0 3%; letter-spacing:-.045em; white-space:normal }
+  .hero-ticket-sticker { left:20%; top:98%; width:60%; height:14% }
+  .hero-ticket-sticker span { font-size:clamp(14px,3.7vw,17px); letter-spacing:-.065em }
+  .hero-ticket-sticker svg { width:18px; height:18px }
   .hero-concept-note { bottom:2.5%; left:23%; right:4%; max-width:none; font-size:7px; text-align:right }
   .hero-figma .hero-bottom-cut { height:25px }
 }
