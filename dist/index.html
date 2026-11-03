@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="rundown.css">
   <link rel="stylesheet" href="sponsors.css">
   <link rel="stylesheet" href="food-market.css">
-  <script src="app.js?v=rundown-20261103" defer></script>
+  <script src="tenant-data.js?v=klbb-tenant-20261103" defer></script>
+  <script src="app.js?v=foodmarket-20261103" defer></script>
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -249,24 +250,22 @@
         <img class="food-market-bolt" src="assets/hero-thunder.png" alt="">
       </div>
       <div class="food-market-container">
-        <header class="food-market-heading reveal"><h2 id="foodMarketTitle">FOOD <span>MARKET</span></h2></header>
-        <div class="food-market-filters" role="group" aria-label="Filter makanan">
-          <button class="food-filter is-active" type="button" data-food-filter="all" aria-pressed="true">Semua</button>
-          <button class="food-filter" type="button" data-food-filter="berat" aria-pressed="false">Makanan Berat</button>
-          <button class="food-filter" type="button" data-food-filter="takjil" aria-pressed="false">Snack &amp; Takjil</button>
-          <button class="food-filter" type="button" data-food-filter="minuman" aria-pressed="false">Minuman</button>
+        <header class="food-market-heading reveal">
+          <h2 id="foodMarketTitle">FOOD <span>MARKET</span></h2>
+          <p>Eksplor tenant favorit yang pernah meramaikan KLBB!</p>
+        </header>
+        <div class="food-market-toolbar">
+          <div class="food-market-intro"><span class="food-market-kicker">✳ KULINER PILIHAN FESTIVAL</span><strong>Jelajahi tenantnya</strong><span class="food-market-reference">Referensi KLBB 2026 · Lineup tenant 2027 segera diumumkan</span></div>
+          <div class="food-market-actions">
+            <div class="food-market-arrows" role="group" aria-label="Navigasi carousel tenant">
+              <button class="food-market-arrow" id="foodMarketPrev" type="button" aria-label="Geser tenant ke kiri">←</button>
+              <button class="food-market-arrow" id="foodMarketNext" type="button" aria-label="Geser tenant ke kanan">→</button>
+            </div>
+            <a class="food-market-all-link" href="./tenants.html">LIHAT SEMUA TENANT <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="food-market-grid" id="foodMarketGrid">
-          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:0ms"><div class="food-market-photo"><img src="assets/food-market-00.webp" alt="Nasi ayam geprek dengan sambal merah" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Ayam Geprek</h3><span>Makanan Berat</span></div></article>
-          <article class="food-market-card reveal" data-food-category="minuman" style="--card-delay:65ms"><div class="food-market-photo"><img src="assets/food-market-01.webp" alt="Es buah segar dengan potongan buah dan es" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Es Buah</h3><span>Minuman</span></div></article>
-          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:130ms"><div class="food-market-photo"><img src="assets/food-market-02.webp" alt="Sate ayam dengan bumbu kacang dan lontong" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Sate Ayam</h3><span>Makanan Berat</span></div></article>
-          <article class="food-market-card reveal" data-food-category="takjil" style="--card-delay:195ms"><div class="food-market-photo"><img src="assets/food-market-03.webp" alt="Klepon dan kue lapis warna-warni" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Jajanan Pasar</h3><span>Snack &amp; Takjil</span></div></article>
-          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:65ms"><div class="food-market-photo"><img src="assets/food-market-04.webp" alt="Burger daging dengan keju dan kentang goreng" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Burger &amp; Fries</h3><span>Makanan Berat</span></div></article>
-          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:130ms"><div class="food-market-photo"><img src="assets/food-market-05.webp" alt="Semangkuk bakso dan mi hangat" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Bakso &amp; Mie</h3><span>Makanan Berat</span></div></article>
-          <article class="food-market-card reveal" data-food-category="minuman" style="--card-delay:195ms"><div class="food-market-photo"><img src="assets/food-market-06.webp" alt="Es susu teh dengan boba" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Milk Tea</h3><span>Minuman</span></div></article>
-          <article class="food-market-card reveal" data-food-category="takjil" style="--card-delay:260ms"><div class="food-market-photo"><img src="assets/food-market-07.webp" alt="Martabak manis dengan cokelat dan keju" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Martabak Manis</h3><span>Snack &amp; Takjil</span></div></article>
-        </div>
-        <p class="sr-only" id="foodMarketFilterStatus" aria-live="polite"></p>
+        <div class="food-market-grid" id="foodMarketGrid" aria-label="Tenant Food Market, geser horizontal untuk melihat lainnya" tabindex="0"></div>
+        <p class="food-market-swipe-hint">← GESER UNTUK EKSPLOR TENANT LAINNYA →</p>
       </div>
     </section>
 
