@@ -174,7 +174,7 @@
   .sponsor-logos-primary img {max-width:min(var(--logo-width),18vw);height:auto;max-height:115px}
 }
 @media (max-width:700px) {
-  .site-header .nav-wrap {width:calc(100% - 24px);height:60px;padding:8px 12px;gap:8px}
+  .site-header .nav-wrap {width:calc(100% - 24px);height:64px;padding:7px 12px;gap:8px}
   .site-header .main-nav {top:70px;left:0;right:0}
   .site-header .nav-cta {min-width:0;margin-left:auto;margin-right:8px;padding:9px 10px;font-size:11px;gap:5px}
   .site-header .nav-cta svg {width:15px;height:15px}
