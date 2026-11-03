@@ -669,8 +669,8 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .hero-date-line strong:last-child { flex-basis:100% }
   .hero-year-bubbles { gap:2px }
   .hero-year-bubbles b { width:clamp(29px,8vw,35px); height:clamp(29px,8vw,35px); font-size:clamp(14px,4vw,18px) }
-  .hero-extra-banner { left:1%; top:82%; width:98%; height:12% }
-  .hero-extra-banner p { font-size:clamp(9px,2.6vw,11px); margin:0 3%; letter-spacing:-.045em; white-space:normal }
+  .hero-extra-banner { left:1%; top:82%; width:98%; height:13% }
+  .hero-extra-banner p { font-size:clamp(11px,3vw,12px); margin:0 3%; letter-spacing:-.045em; white-space:normal }
 
   .hero-concept-note { bottom:2.5%; left:23%; right:4%; max-width:none; font-size:7px; text-align:right }
   .hero-figma .hero-bottom-cut { height:25px }
