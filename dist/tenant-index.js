@@ -41,7 +41,21 @@
       order.href = tenant.orderUrl;
       order.target = "_blank";
       order.rel = "noopener noreferrer";
-      order.textContent = "Order Sekarang ↗";
+      order.textContent = "Order Sekarang";
+      const orderArrow = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      orderArrow.setAttribute("class", "lucide lucide-arrow-up-right");
+      orderArrow.setAttribute("viewBox", "0 0 24 24");
+      orderArrow.setAttribute("width", "17");
+      orderArrow.setAttribute("height", "17");
+      orderArrow.setAttribute("fill", "none");
+      orderArrow.setAttribute("stroke", "currentColor");
+      orderArrow.setAttribute("stroke-width", "2");
+      orderArrow.setAttribute("stroke-linecap", "round");
+      orderArrow.setAttribute("stroke-linejoin", "round");
+      const orderArrowPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      orderArrowPath.setAttribute("d", "M7 7h10v10M7 17 17 7");
+      orderArrow.append(orderArrowPath);
+      order.append(orderArrow);
       body.append(order);
     } else {
       const pending = document.createElement("span");
