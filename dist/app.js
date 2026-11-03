@@ -340,7 +340,7 @@
     });
   });
 
-  // Food Market: one scrollable row of tenant identities, not food-photo products.
+  // Food Market: two horizontal rows of tenant identities with Lucide UI icons.
   // Order CTAs are intentionally omitted until verified order URLs are supplied.
   const marketGrid = document.getElementById("foodMarketGrid");
   const marketPrev = document.getElementById("foodMarketPrev");
@@ -395,8 +395,22 @@
       action.className = "food-market-card-action";
       action.setAttribute("aria-hidden", "true");
       const arrow = document.createElement("span");
-      arrow.textContent = "↗";
       arrow.className = "food-market-card-arrow";
+      const arrowIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+      arrowIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+      arrowIcon.setAttribute("class", "lucide lucide-arrow-up-right");
+      arrowIcon.setAttribute("viewBox", "0 0 24 24");
+      arrowIcon.setAttribute("width", "20");
+      arrowIcon.setAttribute("height", "20");
+      arrowIcon.setAttribute("fill", "none");
+      arrowIcon.setAttribute("stroke", "currentColor");
+      arrowIcon.setAttribute("stroke-width", "2.3");
+      arrowIcon.setAttribute("stroke-linecap", "round");
+      arrowIcon.setAttribute("stroke-linejoin", "round");
+      const arrowPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      arrowPath.setAttribute("d", "M7 7h10v10M7 17 17 7");
+      arrowIcon.append(arrowPath);
+      arrow.append(arrowIcon);
       arrow.setAttribute("aria-hidden", "true");
       body.append(title, action, arrow);
       card.append(media, body);
@@ -410,7 +424,8 @@
     }
     function scrollMarket(direction) {
       const card = marketGrid.querySelector(".food-market-card");
-      const step = card ? card.getBoundingClientRect().width + 19 : 240;
+      const gap = Number.parseFloat(window.getComputedStyle(marketGrid).columnGap) || 19;
+      const step = card ? card.getBoundingClientRect().width + gap : 240;
       marketGrid.scrollBy({ left: direction * step * 2, behavior: reduceMotion ? "auto" : "smooth" });
     }
     if (marketPrev) marketPrev.addEventListener("click", () => scrollMarket(-1));
