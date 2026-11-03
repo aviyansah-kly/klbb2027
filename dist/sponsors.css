@@ -222,6 +222,10 @@
   .klbb-footer-spark-two {top:88px;left:19%;width:25px}
   .klbb-footer-spark-three {bottom:40px;left:70%;width:25px}
 }
+@media (max-width:420px) {
+  .hero-ticket-sticker { top:103% }
+}
+
 @media (prefers-reduced-motion:reduce) {
   .rundown-marquee-track,.klbb-footer-art img,.site-header .nav-cta,.site-header .nav-cta::before,.hero-ticket-sticker,.hero-ticket-sticker::before {animation:none}
 }
