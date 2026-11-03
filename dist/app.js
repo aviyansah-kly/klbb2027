@@ -97,6 +97,12 @@
   } else {
     storyVideo.play().catch(() => { /* poster stays visible if autoplay is blocked */ });
   }
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !reduceMotion) storyVideo.play().catch(() => {});
+      else storyVideo.pause();
+    }, { threshold:0.05 }).observe(storyScroll);
+  }
 
   function clamp(n, min, max) { return Math.min(max, Math.max(min, n)); }
 
