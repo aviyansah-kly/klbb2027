@@ -392,10 +392,10 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .story-intro .mega-heading { font-size:clamp(39px,9vw,65px); letter-spacing:-.07em }
   .eyebrow { font-size:10px; margin-bottom:17px }
   .intro-desc { font-size:14px; line-height:1.6 }
-  .story-scroll { height:180svh }
+  .story-scroll { height:100svh }
   .story-scroll::before { height:48px }
-  .story-pin { height:100svh }
-  .story-video-shell { height:100% }
+  .story-pin { position:relative; height:100svh }
+  .story-video-shell { height:100%; transform:none }
   .story-video { object-position:52% center }
   .story-video-topline { top:25px; font-size:8px; flex-direction:column; gap:5px }
   .story-video-title { bottom:25%; font-size:clamp(35px,9vw,57px); left:7%; right:5% }
@@ -633,10 +633,10 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .site-header .nav-wrap { width:calc(100% - 24px); height:56px; padding:7px 13px }
   .site-header .brand { min-width:51px; height:auto }
   .site-header .brand img { width:51px; height:auto }
-  .site-header .menu-toggle { flex-basis:37px; width:37px; height:37px }
+  .site-header .menu-toggle { flex-basis:44px; width:44px; height:44px }
   .site-header .main-nav { margin:0; top:calc(100% + 10px) }
   .site-header .main-nav a { font-size:14px; white-space:nowrap }
-  .site-header .nav-cta { display:flex; font-size:11px; padding:8px 14px; margin-left:5px }
+  .site-header .nav-cta { display:flex; min-height:44px; font-size:11px; padding:8px 14px; margin-left:5px }
   .hero-figma { height:750px; min-height:0; padding:0 }
   .hero-central { width:min(95%,540px); left:50%; top:20%; transform:translateX(-50%) }
   .card-noah { --scatter-x:9%; --scatter-y:-16% }
