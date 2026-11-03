@@ -1,17 +1,30 @@
 # KLBB 2027 — Festival Playground
 
-Source snapshot of the KLBB 2027 public microsite, originally developed with ChatGPT Sites.
+Static microsite untuk handoff tim frontend/IT. Repository ini terpisah dari proyek ChatGPT Sites asli.
 
-- Source revision: ChatGPT Sites version 19, commit `4ea4977de38b1098ef1d6200c562bd41f57c24b5`
-- Original live site: https://klbb-2027-festival-playground.aviyansah.chatgpt.site/
-- Website files: `dist/` (static HTML, CSS, JavaScript, images, and video)
-- Deployment: deploy `dist/` as a static directory (for example, Cloudflare Pages with build output directory `dist` and no build command).
+## Jalankan & deploy
 
-This repository is a separate working copy. The original ChatGPT Sites project remains unchanged and online.
+- Preview lokal: `python3 -m http.server 8080 --directory dist`, lalu buka `http://localhost:8080`.
+- Cloudflare Pages: branch `main`, **tanpa build command**, output directory `dist`.
+- Tidak membutuhkan framework, bundler, atau instalasi npm.
 
-## Current preview state
+## Struktur source
 
-- Rundown: two-day interactive schedule with proposed WIB time slots; organizer confirmation is still required before treating the schedule as final.
-- Food Market: eight featured tenant logos and names in a fixed 4-column × 2-row desktop grid (responsive to 2 columns on mobile), with no horizontal scrolling. The CTA below the grid links to `dist/tenants.html` with a searchable 39-tenant index.
-- Tenant names/logos: reference assets from KLBB 2026 Figma; **not a confirmed 2027 tenant lineup**. Three original wordmarks were provided as text rather than image logos. Order links are intentionally not published until official URLs are confirmed.
-- Source: continue editing `dist/`. Cloudflare Pages should use `dist` as its output directory.
+| File | Kegunaan |
+| --- | --- |
+| `dist/index.html` | Struktur homepage |
+| `dist/app.js` | Navigasi, animasi, lineup, rundown, dan 8 tenant di homepage |
+| `dist/tenant-data.js` | Satu sumber data untuk 39 tenant (1 baris per tenant) |
+| `dist/tenants.html` + `tenant-index.js` | Halaman semua tenant, pencarian, dan detail anchor |
+| `dist/styles.css`, `lineup.css`, `rundown.css`, `sponsors.css`, `food-market.css`, `tenant-index.css` | CSS terpisah per bagian |
+| `dist/assets/` | Logo, foto, dekorasi, dan media yang dipakai halaman |
+
+## Aturan pengembangan
+
+1. Edit data tenant hanya di `dist/tenant-data.js`; simpan logo ke `dist/assets/tenants/`.
+2. Homepage sengaja menampilkan **8 tenant** (desktop 4 × 2, mobile 2 kolom); daftar lengkap ada di `tenants.html`.
+3. Jangan menampilkan tautan **Order** sebelum URL resmi tersedia.
+4. Rundown masih menggunakan waktu usulan; nama tenant berasal dari referensi **KLBB 2026**. Keduanya belum menjadi pengumuman resmi KLBB 2027.
+5. Setelah mengubah source, cek desktop/mobile, pencarian tenant, tautan antarhalaman, tab rundown, dan interaksi menu.
+
+Riwayat migrasi dan file sementara tetap dapat dilihat melalui **Git history**; script impor sekali pakai sudah dibersihkan dari branch aktif.
