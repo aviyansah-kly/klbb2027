@@ -1,0 +1,227 @@
+/* Rounded festival navigation and the angular KV language below it. */
+.site-header .nav-wrap {
+  width:min(88%,1160px);
+  padding:9px 15px 9px 31px;
+  gap:19px;
+  border-radius:100px;
+  border:1px solid #ffffff70;
+  background:linear-gradient(135deg,#3877c8b8 0%,#204fa5b5 52%,#153b8dba 100%);
+  backdrop-filter:blur(24px) saturate(170%);
+  -webkit-backdrop-filter:blur(24px) saturate(170%);
+  box-shadow:0 16px 45px #06184955,inset 0 1px 0 #ffffff63,inset 0 -1px 0 #ffffff13;
+}
+.site-header .nav-wrap::before {content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(180deg,#ffffff27 0%,#ffffff09 34%,transparent 72%);pointer-events:none}
+.site-header.is-scrolled .nav-wrap {background:linear-gradient(135deg,#2864b9d9,#173a8ed8);box-shadow:0 14px 40px #0013426b,inset 0 1px 0 #ffffff4b}
+.site-header .main-nav {margin-right:0;gap:clamp(16px,1.9vw,27px)}
+.site-header .main-nav a {letter-spacing:0}
+.site-header .main-nav a:hover {color:#ffe52c}
+.site-header .main-nav.open {border-radius:22px}
+.site-header .nav-cta {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  display:inline-flex;
+  justify-content:center;
+  gap:10px;
+  flex:none;
+  min-width:155px;
+  padding:12px 15px;
+  border:2px solid #0b1d55;
+  border-radius:100px;
+  background:#ffe52c;
+  color:#0b1d55;
+  box-shadow:4px 4px 0 #ff3288;
+  font:800 13px/1.1 "Sora",sans-serif;
+  letter-spacing:0;
+  cursor:pointer;
+  animation:ticket-cta-breathe 3.5s ease-in-out infinite;
+  transition:transform .25s,box-shadow .25s,background .25s;
+}
+.site-header .nav-cta span {font:inherit;white-space:nowrap;line-height:1.1}
+.site-header .nav-cta svg {flex:none;transition:transform .3s}
+.site-header .nav-cta::before {content:"";position:absolute;top:-60%;bottom:-60%;left:-65%;width:40%;background:linear-gradient(90deg,transparent,#fff9,transparent);transform:skewX(-23deg);animation:ticket-cta-shine 5s ease-in-out infinite;pointer-events:none}
+.site-header .nav-cta:hover {background:#fff27b;transform:translateY(-3px);box-shadow:5px 7px 0 #ff3288;animation-play-state:paused}
+.site-header .nav-cta:hover svg {transform:rotate(-13deg) scale(1.1)}
+@keyframes ticket-cta-breathe {0%,100% {box-shadow:4px 4px 0 #ff3288,0 0 0 0 #ffe52c55}50% {box-shadow:4px 4px 0 #ff3288,0 0 0 7px #ffe52c0a}}
+@keyframes ticket-cta-shine {0%,42%,100% {left:-65%}65% {left:150%}}
+.hero-ticket-sticker {
+  left:50%;
+  top:91.8%;
+  width:auto;
+  height:auto;
+  min-width:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:13px 21px;
+  border:2px solid #0b1d55;
+  border-radius:100px;
+  background:#ffe52c;
+  color:#0b1d55;
+  box-shadow:5px 5px 0 #ff3288;
+  transform:translateX(-50%) rotate(-2deg);
+  animation:hero-ticket-pop .85s 1.05s cubic-bezier(.2,1,.2,1) both,ticket-cta-breathe 3.5s 2s ease-in-out infinite;
+  cursor:pointer;
+  pointer-events:auto;
+  overflow:hidden;
+  isolation:isolate;
+  white-space:nowrap;
+}
+.hero-ticket-sticker span {position:relative;z-index:1;margin:0;font:800 clamp(13px,1.5vw,19px)/1.12 "Sora",sans-serif;letter-spacing:-.035em}
+.hero-ticket-sticker svg {position:relative;z-index:1;flex:none;transition:transform .3s}
+.hero-ticket-sticker::before {content:"";position:absolute;top:-65%;bottom:-65%;left:-65%;width:40%;background:linear-gradient(90deg,transparent,#fff9,transparent);transform:skewX(-23deg);animation:ticket-cta-shine 5s 1.6s ease-in-out infinite;pointer-events:none}
+.hero-ticket-sticker:hover {transform:translateX(-50%) translateY(-4px) rotate(0deg);filter:none;background:#fff27b;box-shadow:6px 8px 0 #ff3288}
+.hero-ticket-sticker:hover svg {transform:rotate(-13deg) scale(1.1)}
+
+.lineup-cover-stack > .rundown-section {
+  border-radius:0;
+  clip-path:polygon(0 0,100% 34px,100% 100%,0 100%);
+  margin-top:-38px;
+  box-shadow:none;
+}
+.lineup-heading {margin-bottom:42px}
+.lineup-heading h2 {
+  font:700 clamp(30px,3.1vw,43px)/1.22 "Sora",sans-serif;
+  letter-spacing:.005em;
+  word-spacing:.06em;
+  color:#fff;
+}
+.lineup-heading h2 span {color:#f33683;text-shadow:3px 4px 0 #071b5d;letter-spacing:.005em}
+.rundown-section {padding:140px 0 150px}
+.rundown-heading {margin:0 auto 42px}
+.rundown-heading h2 {
+  font:700 clamp(28px,4.2vw,55px)/1.22 "Sora",sans-serif;
+  letter-spacing:.005em;
+  white-space:nowrap;
+}
+.rundown-heading h2 span {letter-spacing:.005em;text-shadow:3px 4px 0 #0b1d55}
+.rundown-board {border-radius:0;box-shadow:10px 12px 0 #f33683}
+.rundown-board-content {grid-template-columns:215px minmax(0,1fr);min-height:0}
+.rundown-board-aside {justify-content:center;padding:30px 24px}
+.rundown-board .day-tab {border-radius:0;gap:9px;padding:16px 15px}
+.rundown-board .timeline-item {padding:14px 0}
+.rundown-board .timeline-time {border-radius:0}
+.rundown-board-main {padding:26px 36px 30px}
+.rundown-timeline-top {padding:2px 0 12px}
+.rundown-board .timeline-desc {display:none}
+.rundown-board .schedule-note {display:none}
+.rundown-decor-spark-pink {right:8%;top:12%}
+
+.rundown-marquee {position:relative;z-index:5;overflow:hidden;width:102%;left:-1%;background:#f33683;color:#fff;padding:17px 0 13px;margin-top:-31px;margin-bottom:-31px;border-top:3px solid #0b1d55;border-bottom:3px solid #0b1d55;transform:rotate(1.1deg);box-shadow:0 6px 0 #0916403d}
+.rundown-marquee-track {display:flex;align-items:center;width:max-content;white-space:nowrap;animation:rundown-marquee-move 22s linear infinite}
+.rundown-marquee-track span {flex:none;font:800 clamp(17px,2.6vw,33px)/1.15 "Bricolage Grotesque",sans-serif;letter-spacing:-.05em;padding:0 35px 0 0}
+.rundown-marquee-track b {color:#ffe52c;font-weight:800;padding:0 20px}
+@keyframes rundown-marquee-move {to {transform:translateX(-50%)}}
+
+.sponsor-section {background:#fff;color:#242424;padding:88px 0 116px;overflow:hidden}
+.sponsor-content {width:min(1027px,calc(100% - 52px));margin:0 auto;text-align:center}
+.sponsor-content h2 {margin:0;font:700 clamp(26px,3.25vw,40px)/1.25 "Sora",sans-serif;letter-spacing:-.028em;text-transform:uppercase}
+.sponsor-logos {display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;gap:23px;width:100%;margin-left:auto;margin-right:auto}
+.sponsor-logos img {flex:none;width:var(--logo-width);height:var(--logo-height);object-fit:contain;max-width:none}
+.sponsor-logos-primary {margin-top:57px;min-height:120px}
+.sponsor-logos-secondary {margin-top:57px;min-height:146px}
+.sponsor-content #media-partner {margin-top:74px;margin-bottom:54px;scroll-margin-top:105px}
+.media-logo-wall {display:flex;flex-direction:column;gap:29px;align-items:center}
+.media-logo-row {display:flex;flex-wrap:nowrap;align-items:center;justify-content:center;gap:clamp(16px,2.6vw,37px);min-height:50px;width:100%}
+.media-logo-row img {display:block;flex:none;width:var(--logo-width);height:var(--logo-height);max-width:none;object-fit:contain}
+
+.klbb-footer-backdrop {position:relative;background:#fff;overflow:hidden}
+.klbb-footer {position:relative;isolation:isolate;overflow:hidden;min-height:395px;background:#2252a8 url("assets/figma-imgRectangle3579.svg") center top/100% 100% no-repeat;color:#fff;clip-path:polygon(0 28px,100% 0,100% 100%,0 100%)}
+.klbb-footer-art {position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.klbb-footer-art img {position:absolute;display:block;max-width:none;height:auto;user-select:none;-webkit-user-drag:none}
+.klbb-footer-texture {width:100%;height:100% !important;inset:0;object-fit:cover;opacity:.33;mix-blend-mode:screen}
+.klbb-footer-leaf-left {left:-45px;bottom:-75px;width:290px;filter:url(#hero-decor-matte);animation:klbb-footer-float 9s ease-in-out infinite alternate}
+.klbb-footer-leaf-right {right:-82px;bottom:-45px;width:235px;filter:url(#hero-decor-matte);animation:klbb-footer-float 8s -3s ease-in-out infinite alternate-reverse}
+.klbb-footer-yellow {right:60px;bottom:-42px;width:180px;filter:url(#hero-decor-matte);animation:klbb-footer-float 10s -1s ease-in-out infinite alternate}
+.klbb-footer-spark-one {right:29%;top:68px;width:40px;animation:hero-spark-bob 5s ease-in-out infinite}
+.klbb-footer-spark-two {left:24%;top:90px;width:33px;animation:hero-spark-bob 4s -1s ease-in-out infinite}
+.klbb-footer-spark-three {left:62%;bottom:70px;width:31px;animation:hero-spark-bob 5s -2s ease-in-out infinite}
+@keyframes klbb-footer-float {from {translate:-6px 2px;rotate:-1deg}to {translate:5px -8px;rotate:1.2deg}}
+.klbb-footer-center {position:relative;z-index:1;min-height:395px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:42px;padding:54px 24px 20px}
+.klbb-footer-center a {display:block}
+.klbb-footer-center a img {width:208px;height:120px;object-fit:contain}
+.klbb-footer-center p {margin:0;color:#fff;text-align:center;font:300 15px/1.5 "Sora",sans-serif;letter-spacing:-.06em}
+
+.ticket-dialog {width:min(440px,calc(100% - 36px));max-width:none;margin:auto;padding:25px 29px 30px;border:3px solid #0b1d55;border-radius:0;background:#2354a9;color:#fff;box-shadow:13px 13px 0 #f33683}
+.ticket-dialog::backdrop {background:#040d35c4;backdrop-filter:blur(6px)}
+.ticket-dialog-top {display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+.ticket-dialog-top img {height:55px;width:auto;object-fit:contain}
+.ticket-dialog-top button {display:grid;place-items:center;width:39px;height:39px;padding:0;border:2px solid #ffffffb0;border-radius:50%;background:transparent;color:#fff;cursor:pointer}
+.ticket-dialog h2 {margin:29px 0 10px;font:800 clamp(30px,7vw,43px)/1 "Sora",sans-serif;letter-spacing:-.04em}
+.ticket-dialog h2 span {color:#ffe52c}
+.ticket-dialog p {margin:0 0 25px;color:#edf3ff;font:500 14px/1.65 "Sora",sans-serif}
+.ticket-dialog-action {display:inline-flex;justify-content:center;min-width:133px;padding:13px 19px;border:2px solid #0b1d55;border-radius:0;background:#ffe52c;color:#0b1d55;box-shadow:4px 4px 0 #f33683;font:800 14px/1.2 "Sora",sans-serif;cursor:pointer}
+
+@media (max-width:1100px) {
+  .sponsor-content {width:calc(100% - 56px)}
+  .sponsor-logos-secondary {gap:clamp(8px,1.7vw,23px)}
+  .sponsor-logos-secondary img {max-width:min(var(--logo-width),14vw);height:auto;max-height:128px}
+  .media-logo-row {gap:clamp(10px,2vw,28px)}
+  .media-logo-row img {max-width:min(var(--logo-width),22vw);height:auto;max-height:52px}
+}
+@media (max-width:900px) {
+  .site-header .nav-wrap {width:min(100% - 42px,720px);padding:8px 13px 8px 19px;gap:10px}
+  .site-header .main-nav {margin:0;gap:0}
+  .site-header .nav-cta {min-width:136px;padding:10px 12px;font-size:12px;margin:0 11px 0 0}
+  .hero-ticket-sticker {gap:9px;padding:11px 18px}
+  .hero-ticket-sticker span {font-size:clamp(13px,2.1vw,17px)}
+  .hero-ticket-sticker svg {width:19px;height:19px}
+  .rundown-board-content {grid-template-columns:175px minmax(0,1fr)}
+  .rundown-board-aside {padding:23px 18px}
+  .rundown-board-main {padding:24px 22px}
+  .sponsor-logos-primary {gap:clamp(9px,2vw,23px)}
+  .sponsor-logos-primary img {max-width:min(var(--logo-width),18vw);height:auto;max-height:115px}
+}
+@media (max-width:700px) {
+  .site-header .nav-wrap {width:calc(100% - 24px);height:60px;padding:8px 12px;gap:8px}
+  .site-header .main-nav {top:70px;left:0;right:0}
+  .site-header .nav-cta {min-width:0;margin-left:auto;margin-right:8px;padding:9px 10px;font-size:11px;gap:5px}
+  .site-header .nav-cta svg {width:15px;height:15px}
+  .hero-ticket-sticker {top:91.8%;padding:10px 14px;gap:7px;box-shadow:3px 4px 0 #ff3288}
+  .hero-ticket-sticker span {font-size:clamp(12px,3.3vw,15px)}
+  .hero-ticket-sticker svg {width:16px;height:16px}
+  .lineup-cover-stack > .rundown-section {clip-path:polygon(0 0,100% 18px,100% 100%,0 100%);margin-top:-20px}
+  .lineup-heading {margin-bottom:28px}
+  .lineup-heading h2 {font-size:clamp(27px,7vw,36px)}
+  .rundown-section {padding:103px 0 118px}
+  .rundown-heading {margin-bottom:24px}
+  .rundown-heading h2 {font-size:clamp(23px,6.5vw,37px);white-space:nowrap;letter-spacing:-.015em}
+  .rundown-heading h2 span {letter-spacing:-.015em;text-shadow:2px 3px 0 #0b1d55}
+  .rundown-board {border-radius:0;box-shadow:6px 7px 0 #f33683}
+  .rundown-board-content {display:block}
+  .rundown-board-aside {padding:18px;border-right:0;border-bottom:2px dashed #ffffff6b}
+  .rundown-board .schedule-tabs {display:flex;flex-direction:row;gap:10px}
+  .rundown-board .day-tab {flex:1;padding:11px 12px;font-size:12px;gap:6px;border-radius:0}
+  .rundown-board .day-tab strong {font-size:18px}
+  .rundown-board-main {padding:16px 18px 23px}
+  .rundown-board .timeline-item {padding:13px 0}
+  .rundown-aside-spark {display:none}
+  .rundown-marquee {padding:10px 0;margin-top:-19px;margin-bottom:-19px;transform:rotate(1deg)}
+  .rundown-marquee-track span {font-size:17px}
+  .rundown-marquee-track b {padding:0 10px}
+  .sponsor-section {padding:62px 0 74px}
+  .sponsor-content {width:calc(100% - 30px)}
+  .sponsor-content h2 {font-size:clamp(22px,6vw,30px)}
+  .sponsor-logos {gap:14px;flex-wrap:wrap;min-height:0}
+  .sponsor-logos-primary {margin-top:36px}
+  .sponsor-logos-secondary {margin-top:29px}
+  .sponsor-logos img,.sponsor-logos-primary img,.sponsor-logos-secondary img {width:auto;max-width:min(var(--logo-width),25vw);height:auto;max-height:87px;object-fit:contain}
+  .sponsor-content #media-partner {margin-top:64px;margin-bottom:32px}
+  .media-logo-wall {gap:12px}
+  .media-logo-row {flex-wrap:wrap;gap:10px 18px;min-height:0}
+  .media-logo-row img {width:auto;max-width:min(var(--logo-width),25vw);height:auto;max-height:44px}
+  .klbb-footer {min-height:320px;clip-path:polygon(0 18px,100% 0,100% 100%,0 100%)}
+  .klbb-footer-center {min-height:320px;gap:30px;padding-top:36px}
+  .klbb-footer-center a img {width:167px;height:auto}
+  .klbb-footer-center p {font-size:11px;max-width:310px}
+  .klbb-footer-leaf-left {width:200px;left:-70px;bottom:-65px}
+  .klbb-footer-leaf-right {width:160px;right:-70px;bottom:-30px}
+  .klbb-footer-yellow {width:130px;right:22px;bottom:-35px}
+  .klbb-footer-spark-one {top:60px;right:18%;width:27px}
+  .klbb-footer-spark-two {top:88px;left:19%;width:25px}
+  .klbb-footer-spark-three {bottom:40px;left:70%;width:25px}
+}
+@media (prefers-reduced-motion:reduce) {
+  .rundown-marquee-track,.klbb-footer-art img,.site-header .nav-cta,.site-header .nav-cta::before,.hero-ticket-sticker,.hero-ticket-sticker::before {animation:none}
+}

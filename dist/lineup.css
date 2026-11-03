@@ -1,0 +1,245 @@
+/* The video dissolves gently into the same navy surface as the artist list. */
+.story-video-shell {transform-origin:center bottom}
+.story-scroll::after {
+  content:"";
+  position:absolute;
+  z-index:8;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:clamp(90px,13vw,170px);
+  background:linear-gradient(to bottom,transparent 0%,#0b1d55 90%);
+  pointer-events:none;
+}
+
+/* DWP-inspired multi-name rows, interpreted in the KLBB visual language. */
+.lineup {
+  isolation:isolate;
+  overflow:hidden;
+  margin-top:-1px;
+  scroll-margin-top:92px;
+  padding:58px 0 0;
+  background:#0b1d55;
+  color:#fff;
+}
+.lineup-cover-stack {position:relative;isolation:isolate;scroll-margin-top:92px}
+.lineup-cover-stack > .lineup {position:sticky;top:var(--lineup-pin-top,0px);z-index:1}
+.lineup-cover-stack > .rundown-section {
+  position:relative;
+  z-index:2;
+  margin-top:-28px;
+  border-radius:clamp(26px,5vw,72px) clamp(26px,5vw,72px) 0 0;
+  box-shadow:0 -28px 65px #030f3e65;
+  background:var(--yellow);
+}
+.lineup-cover-stack > .rundown-section > .container {translate:0 var(--rundown-content-offset,0px)}
+.lineup::before {
+  content:"";
+  position:absolute;
+  inset:20% 0 0;
+  z-index:0;
+  background:url("assets/hero-texture.webp") center/cover no-repeat;
+  opacity:.09;
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 20%,transparent 82%);
+  mask-image:radial-gradient(ellipse at center,#000 20%,transparent 82%);
+  pointer-events:none;
+}
+.lineup::after {
+  content:"";
+  position:absolute;
+  z-index:0;
+  top:20%;
+  left:50%;
+  width:min(120vw,1450px);
+  aspect-ratio:1;
+  border:1px solid #9eceff14;
+  border-radius:50%;
+  box-shadow:0 0 0 120px #8bbcff08,0 0 0 240px #8bbcff04;
+  transform:translateX(-50%) scale(.92);
+  transform-origin:center;
+  animation:lineup-rings 11s ease-in-out infinite alternate;
+  pointer-events:none;
+}
+.lineup .container {position:relative;z-index:1}
+.lineup-heading {display:block;text-align:center;margin:0 0 32px}
+.lineup-heading h2 {color:#fff;font-family:"Sora",sans-serif;font-size:clamp(30px,3.2vw,45px);font-weight:700;line-height:1.2;letter-spacing:.07em;word-spacing:.13em;white-space:nowrap}
+
+/* The text itself is the interaction target; the photo follows the cursor. */
+.lineup-artist-list {position:relative;z-index:1;margin:0 auto;max-width:1320px}
+.lineup-name-row {display:flex;justify-content:center;align-items:center;gap:clamp(8px,.9vw,15px);min-height:99px}
+.lineup-dot {display:block;flex:0 0 7px;width:7px;height:7px;border-radius:50%;background:#ff7a41;box-shadow:0 0 12px #ff7a4159}
+.lineup-artist {
+  --artist-accent:#ffe331;
+  position:relative;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  flex:0 0 auto;
+  width:auto;
+  min-height:0;
+  padding:8px 0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:#fff;
+  text-align:center;
+  cursor:pointer;
+  isolation:isolate;
+}
+.lineup-artist::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  opacity:0;
+  background:transparent;
+  transition:opacity .32s ease;
+}
+.lineup-artist-label {
+  display:block;
+  font-family:"Sora",sans-serif;
+  font-size:clamp(31px,4.05vw,55px);
+  line-height:1.15;
+  font-weight:700;
+  letter-spacing:-.045em;
+  word-spacing:.08em;
+  white-space:nowrap;
+  text-transform:uppercase;
+  transition:color .27s ease,transform .4s cubic-bezier(.2,.85,.2,1),text-shadow .27s ease,opacity .27s ease;
+}
+.lineup-artist[data-artist="noah"] {--artist-accent:#ff4697}
+.lineup-artist[data-artist="syahrini"] {--artist-accent:#48d4ff}
+.lineup-artist[data-artist="hindia"] {--artist-accent:#a1ff78}
+.lineup-artist[data-artist="naykilla"] {--artist-accent:#ffe331}
+.lineup-artist[data-artist="nassar"] {--artist-accent:#ff9c4a}
+.lineup-artist-list:hover .lineup-artist:not(.is-active) .lineup-artist-label {opacity:.66}
+.lineup-artist.is-active::before,.lineup-artist:focus-visible::before {opacity:1}
+.lineup-artist.is-active .lineup-artist-label,.lineup-artist:focus-visible .lineup-artist-label {
+  color:var(--artist-accent);
+  text-shadow:0 0 45px #a6c4ff35;
+  transform:translateY(-3px) scale(1.025);
+  opacity:1 !important;
+}
+.lineup-artist:focus-visible {outline:2px dashed #ffe331;outline-offset:-3px}
+.lineup-inline-photo {display:none}
+
+/* A playful end-card made exclusively from ornament assets already in the hero. */
+.lineup-outro {position:relative;z-index:1;width:100%;height:clamp(210px,22vw,310px);margin-top:clamp(18px,3vw,44px);overflow:hidden;pointer-events:none}
+.lineup-outro img {position:absolute;display:block;height:auto;max-width:none;user-select:none;-webkit-user-drag:none}
+.lineup-outro-leaf,.lineup-outro-wave,.lineup-outro-gold {filter:url(#hero-decor-matte);animation:lineup-decor-float 9s ease-in-out infinite alternate}
+.lineup-outro-leaf {z-index:2;width:clamp(270px,30vw,430px);left:-4%;bottom:-65px;transform-origin:left bottom;animation-duration:8s}
+.lineup-outro-wave {z-index:1;width:clamp(720px,74vw,1100px);left:19%;bottom:-330px;animation-duration:11.5s;animation-delay:-3s}
+.lineup-outro-gold {z-index:2;width:clamp(290px,33vw,460px);right:-4%;bottom:-115px;animation-duration:9.5s;animation-delay:-4s}
+.lineup-outro-bolt {z-index:3;width:clamp(77px,9vw,125px);left:66%;top:1%;transform:rotate(-10deg);animation:lineup-bolt-bob 7s ease-in-out infinite}
+.lineup-outro-spark {z-index:4;animation:hero-spark-bob 4.8s ease-in-out infinite}
+.lineup-outro-spark-pink {width:clamp(40px,5vw,70px);left:17%;top:11%;animation-delay:-1.2s}
+.lineup-outro-spark-yellow {width:clamp(44px,5vw,74px);right:13%;top:32%;animation-delay:-2.5s}
+.lineup-outro-spark-blue {width:clamp(32px,3.4vw,48px);left:49%;top:9%;animation-delay:-3.4s}
+@keyframes lineup-decor-float {from {translate:-4px 3px;rotate:-.7deg}to {translate:6px -7px;rotate:1.1deg}}
+@keyframes lineup-bolt-bob {0%,100% {transform:rotate(-10deg) translateY(0)}50% {transform:rotate(-4deg) translateY(-8px)}}
+
+.lineup-cursor-preview {
+  --preview-color:#ff2182;
+  position:fixed;
+  z-index:65;
+  top:0;
+  left:0;
+  width:228px;
+  pointer-events:none;
+  opacity:0;
+  transform:translate3d(-500px,-500px,0);
+  transition:opacity .16s ease;
+  will-change:transform;
+  filter:drop-shadow(12px 17px 20px #030b39a8);
+}
+.lineup-cursor-preview.is-visible {opacity:1}
+.lineup-preview-artwork {
+  position:relative;
+  width:100%;
+  height:263px;
+  overflow:hidden;
+  background:var(--preview-color);
+  border:3px solid #fff;
+  clip-path:polygon(0 3%,100% 0,98% 98%,2% 100%);
+  transform:rotate(-9deg) scale(.82);
+  transition:transform .29s cubic-bezier(.2,.86,.2,1),background .22s ease;
+}
+.lineup-cursor-preview.is-visible .lineup-preview-artwork {transform:rotate(-5deg) scale(1)}
+.lineup-preview-artwork::before {content:"";position:absolute;z-index:0;width:145%;aspect-ratio:1;border:2px solid #ffffff3d;border-radius:50%;left:-25%;top:-35%}
+.lineup-cursor-preview[data-type="poster"] .lineup-preview-artwork {border:0;background:transparent;clip-path:none;overflow:visible}
+.lineup-cursor-preview[data-type="poster"] .lineup-preview-artwork::before {display:none}
+.lineup-cursor-preview[data-type="poster"] .lineup-preview-caption {display:none}
+.lineup-preview-photo {
+  position:absolute;
+  z-index:1;
+  bottom:-4%;
+  right:-10%;
+  display:block;
+  width:120%;
+  height:108%;
+  max-width:none;
+  object-fit:contain;
+  object-position:center bottom;
+  opacity:0;
+  transform:scale(.95) translateY(10px);
+  transition:opacity .2s ease,transform .45s cubic-bezier(.2,.85,.2,1);
+}
+.lineup-preview-photo.is-poster {width:100%;height:100%;right:0;bottom:0;object-fit:contain;object-position:center bottom}
+.lineup-preview-photo.is-editorial {width:100%;height:100%;right:0;bottom:0;object-fit:cover;object-position:center}
+.lineup-preview-photo.is-active {opacity:1;transform:scale(1) translateY(0)}
+.lineup-preview-caption {display:block;padding:14px 4px 0;color:#fff;font:800 12px/1 "Sora",sans-serif;text-shadow:0 2px 5px #0006}
+@keyframes lineup-rings {from {transform:translateX(-50%) scale(.92);opacity:.6}to {transform:translateX(-50%) scale(1.08);opacity:1}}
+
+@media (max-width:900px) {
+  .lineup {padding:54px 0 0}
+  .lineup-heading {margin:0 0 28px}
+  .lineup-heading h2 {font-size:clamp(30px,4vw,38px)}
+  .lineup-name-row {min-height:83px;gap:clamp(7px,.9vw,12px)}
+  .lineup-artist-label {font-size:clamp(25px,4.15vw,39px)}
+  .lineup-cursor-preview {width:195px}
+  .lineup-preview-artwork {height:225px}
+  .lineup-outro {height:255px;margin-top:28px}
+  .lineup-outro-leaf {left:-13%;width:360px}
+  .lineup-outro-wave {left:7%;width:850px;bottom:-310px}
+  .lineup-outro-gold {right:-16%;width:370px}
+}
+@media (max-width:650px), (hover:none), (pointer:coarse) {
+  .lineup {padding:49px 0 0}
+  .lineup-heading {display:block;margin:0 0 24px}
+  .lineup-heading h2 {font-size:clamp(27px,7vw,36px);line-height:1.2}
+  .lineup-name-row {flex-direction:column;align-items:stretch;gap:0;min-height:0}
+  .lineup-dot {display:none}
+  .lineup-artist {justify-content:flex-start;width:100%;min-height:74px;padding:8px 76px 8px 8px;border-bottom:1px solid #ffffff26;cursor:pointer}
+  .lineup-artist:first-child {border-top:0}
+  .lineup-artist-label {font-size:clamp(27px,7.7vw,42px);line-height:1.13;text-align:left}
+  .lineup-artist[data-artist="nadin-amizah"] .lineup-artist-label,
+  .lineup-artist[data-artist="for-revenge"] .lineup-artist-label,
+  .lineup-artist[data-artist="reality-club"] .lineup-artist-label,
+  .lineup-artist[data-artist="lomba-sihir"] .lineup-artist-label,
+  .lineup-artist[data-artist="barasuara"] .lineup-artist-label,
+  .lineup-artist[data-artist="nassar"] .lineup-artist-label {font-size:clamp(21px,6.4vw,33px)}
+  .lineup-artist-list:hover .lineup-artist:not(.is-active) .lineup-artist-label {opacity:1}
+  .lineup-artist.is-active .lineup-artist-label {transform:translateX(3px)}
+  .lineup-inline-photo {display:block;position:absolute;right:0;top:7px;width:57px;height:59px;background:var(--photo);overflow:hidden;transform:rotate(4deg) scale(.94);border:2px solid #ffffffc7;box-shadow:4px 5px 0 #07163c;transition:transform .25s ease,box-shadow .25s ease}
+  .lineup-inline-photo img {width:112%;height:105%;max-width:none;object-fit:contain;object-position:center bottom;position:absolute;bottom:-4%;right:-6%}
+  .lineup-artist[data-type="poster"] .lineup-inline-photo {background:transparent;border:0;box-shadow:none;overflow:visible}
+  .lineup-artist[data-type="poster"] .lineup-inline-photo img {width:100%;height:100%;bottom:0;right:0;object-fit:contain}
+  .lineup-artist[data-type="editorial"] .lineup-inline-photo img {width:100%;height:100%;bottom:0;right:0;object-fit:cover}
+  .lineup-artist.is-tapped .lineup-inline-photo,.lineup-artist:focus-visible .lineup-inline-photo {transform:rotate(-5deg) scale(1.075);box-shadow:6px 7px 0 #ff2182}
+  .lineup-cursor-preview {display:none}
+  .lineup-outro {height:218px;margin-top:14px}
+  .lineup-outro-leaf {width:270px;left:-27%;bottom:-65px}
+  .lineup-outro-wave {width:600px;left:-22%;bottom:-220px}
+  .lineup-outro-gold {width:270px;right:-40%;bottom:-80px}
+  .lineup-outro-bolt {width:65px;left:67%;top:5%}
+  .lineup-outro-spark-pink {width:42px;left:9%;top:17%}
+  .lineup-outro-spark-yellow {width:44px;right:11%;top:47%}
+  .lineup-outro-spark-blue {width:33px;left:47%;top:9%}
+  .lineup-cover-stack > .rundown-section {margin-top:-18px;border-radius:30px 30px 0 0}
+}
+@media (prefers-reduced-motion:reduce) {
+  .lineup::after {animation:none}
+  .lineup-artist-label,.lineup-cursor-preview,.lineup-preview-artwork,.lineup-preview-photo,.lineup-inline-photo {transition:none}
+  .lineup-outro img {animation:none}
+  .lineup-cover-stack > .rundown-section > .container {translate:none}
+}
