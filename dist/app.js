@@ -265,20 +265,22 @@
 
   const scheduleData = {
     "1": [
-      ["TBA", "Open Gate"],
-      ["TBA", "Festival Warm-up"],
-      ["TBA", "Ngabuburit"],
-      ["TBA", "Buka Bersama"],
-      ["TBA", "Main Stage"],
-      ["TBA", "Closing Set"]
+      ["15.00", "Open Gate", "Gerbang festival, booth kuliner, dan area aktivitas dibuka."],
+      ["15.30", "Festival Warm-up", "Musik pembuka dan pemanasan suasana festival."],
+      ["16.15", "Ngabuburit Session", "Aktivitas komunitas dan penampilan sore."],
+      ["17.45", "Persiapan Buka Puasa", "Waktu bersiap dan menuju area berbuka."],
+      ["18.05", "Buka Bersama", "Menikmati hidangan bersama, mengikuti waktu Magrib setempat."],
+      ["19.00", "Main Stage", "Rangkaian penampilan malam di panggung utama."],
+      ["20.30", "Closing Set", "Penampilan penutup Hari 01."]
     ],
     "2": [
-      ["TBA", "Open Gate"],
-      ["TBA", "Afternoon Session"],
-      ["TBA", "Community Moment"],
-      ["TBA", "Buka Bersama"],
-      ["TBA", "Night Performances"],
-      ["TBA", "Final Closing"]
+      ["15.00", "Open Gate", "Gerbang festival, booth kuliner, dan area aktivitas dibuka."],
+      ["15.30", "Afternoon Session", "Sesi pembuka dan hiburan sore Hari 02."],
+      ["16.15", "Community Session", "Ruang berkumpul, aktivitas, dan penampilan komunitas."],
+      ["17.45", "Persiapan Buka Puasa", "Waktu bersiap dan menuju area berbuka."],
+      ["18.05", "Buka Bersama", "Menikmati hidangan bersama, mengikuti waktu Magrib setempat."],
+      ["19.00", "Night Performances", "Rangkaian penampilan malam Hari 02."],
+      ["20.30", "Closing Performance", "Penampilan penutup rangkaian festival."]
     ]
   };
   const timeline = document.getElementById("timelineList");
@@ -298,7 +300,10 @@
       const title = document.createElement("strong");
       title.className = "timeline-title";
       title.textContent = event[1];
-      content.append(title);
+      const description = document.createElement("span");
+      description.className = "timeline-desc";
+      description.textContent = event[2];
+      content.append(title, description);
       const number = document.createElement("span");
       number.className = "timeline-num";
       number.setAttribute("aria-hidden", "true");
