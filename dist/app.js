@@ -340,28 +340,84 @@
     });
   });
 
-  const foodFilterButtons = Array.from(document.querySelectorAll("[data-food-filter]"));
-  const foodCards = Array.from(document.querySelectorAll(".food-market-card"));
-  const foodFilterStatus = document.getElementById("foodMarketFilterStatus");
-  foodFilterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const category = button.dataset.foodFilter;
-      foodFilterButtons.forEach((filterButton) => {
-        const active = filterButton === button;
-        filterButton.classList.toggle("is-active", active);
-        filterButton.setAttribute("aria-pressed", String(active));
-      });
-      let visibleCount = 0;
-      foodCards.forEach((card) => {
-        const visible = category === "all" || card.dataset.foodCategory === category;
-        card.hidden = !visible;
-        card.classList.remove("is-filtered-in");
-        if (visible) {
-          visibleCount++;
-          if (!reduceMotion) requestAnimationFrame(() => card.classList.add("is-filtered-in"));
-        }
-      });
-      if (foodFilterStatus) foodFilterStatus.textContent = `${visibleCount} pilihan makanan ditampilkan`;
+  // Food Market: one scrollable row of tenant identities, not food-photo products.
+  // Order CTAs are intentionally omitted until verified order URLs are supplied.
+  const marketGrid = document.getElementById("foodMarketGrid");
+  const marketPrev = document.getElementById("foodMarketPrev");
+  const marketNext = document.getElementById("foodMarketNext");
+  const tenantCatalog = Array.isArray(window.KLBB_TENANTS) ? window.KLBB_TENANTS : [];
+
+  if (marketGrid && tenantCatalog.length) {
+    const featuredSlugs = [
+      "bowlle", "rena-foodies", "se-indonesia", "bakso-rusuk-solo-39",
+      "ayam-pak-gembus", "tebubu", "lawson", "burger-bangor",
+      "hokben", "shihlin-taiwan-street-snacks", "chatime", "mujigae",
+      "pisang-madu-pasti", "jagiya-korean-food"
+    ];
+    const featured = featuredSlugs
+      .map((slug) => tenantCatalog.find((tenant) => tenant.slug === slug))
+      .filter(Boolean);
+    const visibleTenants = featured.length ? featured : tenantCatalog.filter((tenant) => tenant.logo).slice(0, 14);
+
+    visibleTenants.forEach((tenant) => {
+      const card = document.createElement("a");
+      card.className = "food-market-card";
+      card.href = "./tenants.html#" + encodeURIComponent(tenant.slug);
+      card.setAttribute("aria-label", "Lihat tenant " + tenant.name);
+      const media = document.createElement("div");
+      media.className = "food-market-photo";
+      media.style.setProperty("--tenant-bg", tenant.background || "#fff4dc");
+      if (tenant.logo) {
+        const logo = document.createElement("img");
+        logo.src = tenant.logo;
+        logo.alt = "Logo " + tenant.name;
+        logo.loading = "lazy";
+        logo.decoding = "async";
+        logo.addEventListener("error", () => {
+          const fallback = document.createElement("span");
+          fallback.className = "food-market-wordmark";
+          fallback.textContent = tenant.name;
+          logo.replaceWith(fallback);
+        }, { once: true });
+        media.append(logo);
+      } else {
+        const fallback = document.createElement("span");
+        fallback.className = "food-market-wordmark";
+        fallback.textContent = tenant.name;
+        media.append(fallback);
+      }
+      const body = document.createElement("div");
+      body.className = "food-market-card-body";
+      const title = document.createElement("h3");
+      title.textContent = tenant.name;
+      const action = document.createElement("span");
+      action.textContent = "KENALI TENANT";
+      action.className = "food-market-card-action";
+      action.setAttribute("aria-hidden", "true");
+      const arrow = document.createElement("span");
+      arrow.textContent = "↗";
+      arrow.className = "food-market-card-arrow";
+      arrow.setAttribute("aria-hidden", "true");
+      body.append(title, action, arrow);
+      card.append(media, body);
+      marketGrid.append(card);
     });
-  });
+
+    function updateMarketArrows() {
+      const maxScroll = Math.max(0, marketGrid.scrollWidth - marketGrid.clientWidth);
+      if (marketPrev) marketPrev.disabled = marketGrid.scrollLeft <= 3;
+      if (marketNext) marketNext.disabled = marketGrid.scrollLeft >= maxScroll - 3;
+    }
+    function scrollMarket(direction) {
+      const card = marketGrid.querySelector(".food-market-card");
+      const step = card ? card.getBoundingClientRect().width + 19 : 240;
+      marketGrid.scrollBy({ left: direction * step * 2, behavior: reduceMotion ? "auto" : "smooth" });
+    }
+    if (marketPrev) marketPrev.addEventListener("click", () => scrollMarket(-1));
+    if (marketNext) marketNext.addEventListener("click", () => scrollMarket(1));
+    marketGrid.addEventListener("scroll", updateMarketArrows, { passive: true });
+    window.addEventListener("resize", updateMarketArrows, { passive: true });
+    requestAnimationFrame(updateMarketArrows);
+  }
+
 })();
