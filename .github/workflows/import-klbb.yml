@@ -42,7 +42,7 @@ jobs:
               if destination.is_file():
                   existing = destination.read_bytes()
                   existing_sha = hashlib.sha1(
-                      b"blob " + str(len(existing)).encode() + b"\\0" + existing
+                      b"blob " + str(len(existing)).encode() + b"\0" + existing
                   ).hexdigest()
                   if len(existing) == expected_size and existing_sha == expected_sha:
                       return path
