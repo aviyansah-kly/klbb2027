@@ -1,4 +1,4 @@
-/* KLBB 2027 Food Market: two-row tenant carousel with Lucide controls. */
+/* KLBB Food Market — fixed 4×2 tenant grid; preserve original festival colors and ornaments. */
 .food-market-section {
   position:relative;
   z-index:1;
@@ -29,33 +29,64 @@
   pointer-events:none;
 }
 .food-market-container {position:relative;z-index:2;width:min(1190px,calc(100% - 84px));margin:0 auto}
-.food-market-heading {margin:0 auto 35px;text-align:center}
+.food-market-heading {margin:0 auto 40px;text-align:center}
 .food-market-heading h2 {margin:0;font:800 clamp(39px,5.2vw,68px)/1.12 "Sora",sans-serif;letter-spacing:-.045em;word-spacing:.06em;white-space:nowrap;text-shadow:4px 5px 0 #086b49}
 .food-market-heading h2 span {color:#ffe52c;text-shadow:4px 5px 0 #f33683}
 .food-market-heading p {margin:20px auto 0;font:600 clamp(13px,1.4vw,16px)/1.6 "Sora",sans-serif;color:#e3ffe8}
-.food-market-toolbar {display:flex;align-items:center;justify-content:flex-end;margin-bottom:18px}
-.food-market-intro strong {font:800 clamp(22px,2.6vw,30px)/1.25 "Sora",sans-serif;letter-spacing:-.05em}
-.food-market-arrows {display:flex;gap:8px}
-.food-market-arrow {display:grid;place-items:center;width:44px;height:44px;padding:0;border:2px solid #fff;border-radius:50%;background:#0b1d55;color:#fff;font:800 24px/1 "Sora",sans-serif;box-shadow:3px 4px 0 #086b49;cursor:pointer;transition:transform .2s,background .2s,opacity .2s}
-.food-market-arrow:hover:not(:disabled) {transform:translateY(-3px);background:#f33683}
-.food-market-arrow:disabled {opacity:.36;cursor:default}
-.food-market-all-link {display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:47px;padding:11px 17px;border:2px solid #0b1d55;border-radius:2px;background:#ffe52c;color:#0b1d55;box-shadow:5px 5px 0 #f33683;font:800 11px/1.3 "Sora",sans-serif;letter-spacing:.025em;text-align:center;white-space:nowrap;transition:transform .2s,box-shadow .2s}
-.food-market-all-link:hover {transform:translate(-1px,-3px);box-shadow:7px 8px 0 #f33683}
-.food-market-grid {display:grid;grid-template-rows:repeat(2,minmax(0,1fr));grid-auto-columns:clamp(190px,19.5vw,225px);grid-auto-flow:column;align-items:stretch;gap:19px 20px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-padding-inline:8px;overscroll-behavior-x:contain;scrollbar-width:none;padding:9px 14px 23px 5px;-webkit-overflow-scrolling:touch}
-.food-market-grid::-webkit-scrollbar {display:none}
-.food-market-grid:focus-visible {outline:3px dashed #ffe52c;outline-offset:3px}
-.food-market-card {position:relative;display:flex;flex:0 0 clamp(190px,19.5vw,225px);flex-direction:column;min-width:0;min-height:295px;margin:0;border:3px solid #0b1d55;border-radius:0;background:#fffaf0;color:#0b1d55;box-shadow:6px 7px 0 #08624e;overflow:hidden;scroll-snap-align:start;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease}
-.food-market-card:hover {transform:translateY(-5px) rotate(-.5deg);box-shadow:8px 10px 0 #0b1d55}
+
+/* Exactly four complete cards in each desktop row: no horizontal scrolling. */
+.food-market-grid {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:repeat(2,auto);
+  grid-auto-flow:row;
+  align-items:stretch;
+  gap:25px 22px;
+  padding:4px 8px 12px 4px;
+  overflow:visible;
+}
+.food-market-card {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  margin:0;
+  border:3px solid #0b1d55;
+  border-radius:0;
+  background:#fffaf0;
+  color:#0b1d55;
+  box-shadow:6px 7px 0 #08624e;
+  text-decoration:none;
+  overflow:hidden;
+  transition:transform .26s ease,box-shadow .26s ease;
+}
+.food-market-card:hover {transform:translateY(-5px);box-shadow:8px 10px 0 #0b1d55}
 .food-market-card:focus-visible {outline:3px solid #ffe52c;outline-offset:5px}
-.food-market-photo {position:relative;display:grid;place-items:center;overflow:hidden;aspect-ratio:1.15;background:var(--tenant-bg,#fff0bd);padding:20px}
-.food-market-photo img {display:block;width:100%;height:100%;max-height:160px;object-fit:contain;transition:transform .45s ease}
-.food-market-card:hover .food-market-photo img {transform:scale(1.065)}
+.food-market-photo {
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  aspect-ratio:1.35;
+  padding:18px;
+  background:var(--tenant-bg,#fff0bd);
+}
+.food-market-photo img {display:block;width:100%;height:100%;max-height:180px;object-fit:contain;transition:transform .45s ease}
+.food-market-card:hover .food-market-photo img {transform:scale(1.045)}
 .food-market-wordmark {display:grid;place-items:center;text-align:center;font:800 24px/1.1 "Sora",sans-serif;letter-spacing:-.06em;overflow-wrap:anywhere}
-.food-market-card-body {position:relative;display:flex;flex:1;flex-direction:column;gap:12px;min-height:112px;padding:17px 15px 17px}
-.food-market-card-body h3 {max-width:calc(100% - 22px);margin:0;font:800 clamp(13px,1.25vw,16px)/1.32 "Sora",sans-serif;letter-spacing:-.03em;overflow-wrap:anywhere}
-.food-market-card-action {margin-top:auto;color:#1b7b5b;font:800 9px/1.3 "Sora",sans-serif;letter-spacing:.09em}
-.food-market-card-arrow {position:absolute;right:14px;bottom:14px;display:grid;place-items:center;color:#e83180}
-.food-market-card-arrow svg {display:block;width:20px;height:20px}
+.food-market-card-body {
+  display:flex;
+  flex:1;
+  align-items:center;
+  min-height:74px;
+  padding:15px 16px;
+}
+.food-market-card-body h3 {max-width:100%;margin:0;font:800 clamp(14px,1.35vw,18px)/1.32 "Sora",sans-serif;letter-spacing:-.035em;overflow-wrap:anywhere}
+.food-market-footer {display:flex;justify-content:center;margin:40px auto 0}
+.food-market-all-link {display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:47px;padding:11px 19px;border:2px solid #0b1d55;border-radius:2px;background:#ffe52c;color:#0b1d55;box-shadow:5px 5px 0 #f33683;font:800 11px/1.3 "Sora",sans-serif;letter-spacing:.025em;text-align:center;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+.food-market-all-link svg {display:block;width:20px;height:20px;flex:none}
+.food-market-all-link:hover {transform:translate(-1px,-3px);box-shadow:7px 8px 0 #f33683}
+
 .food-market-ornaments {position:absolute;z-index:1;inset:0;overflow:hidden;pointer-events:none}
 .food-market-ornaments img {position:absolute;display:block;max-width:none;height:auto;user-select:none;-webkit-user-drag:none}
 .food-market-leaf-left,.food-market-leaf-right {filter:url(#hero-decor-matte);animation:food-market-float 9s ease-in-out infinite alternate}
@@ -67,20 +98,23 @@
 @keyframes food-market-glow {from {scale:1;opacity:.65}to {scale:1.035;opacity:1}}
 @keyframes food-market-float {from {translate:-4px 4px;rotate:-1deg}to {translate:8px -10px;rotate:1.6deg}}
 @keyframes food-market-bolt {0%,100% {transform:rotate(-17deg) translateY(0)}50% {transform:rotate(-9deg) translateY(-9px)}}
-@media (max-width:900px) {
-  .food-market-container {width:calc(100% - 50px)}
-  .food-market-toolbar {align-items:start}
-  .food-market-actions {align-items:end;flex-direction:column-reverse;gap:15px}
+
+@media (max-width:1050px) {
+  .food-market-container {width:calc(100% - 56px)}
+  .food-market-grid {gap:19px 16px}
+  .food-market-card-body {min-height:68px;padding:14px 12px}
+  .food-market-card-body h3 {font-size:14px}
+  .food-market-photo {padding:14px}
 }
 @media (max-width:750px) {
   .food-market-section {padding:91px 0 112px}
   .food-market-container {width:calc(100% - 34px)}
-  .food-market-heading {margin-bottom:32px}
+  .food-market-heading {margin-bottom:29px}
   .food-market-heading h2 {font-size:clamp(33px,7vw,49px)}
-  .food-market-toolbar {align-items:stretch;flex-direction:column;gap:20px}
-  .food-market-actions {align-items:center;justify-content:space-between;flex-direction:row}
-  .food-market-grid {margin-right:-17px;padding-right:17px;gap:15px}
-  .food-market-card {flex-basis:204px;min-height:286px}
+  .food-market-grid {grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;gap:20px 17px;padding:4px 7px 11px 3px}
+  .food-market-photo {aspect-ratio:1.3}
+  .food-market-card-body {min-height:65px}
+  .food-market-footer {margin-top:32px}
   .food-market-leaf-left {left:-210px;bottom:-115px}
   .food-market-leaf-right {right:-205px;top:3%}
   .food-market-spark-one {left:5%;top:12%;width:35px}
@@ -90,43 +124,16 @@
 @media (max-width:430px) {
   .food-market-heading h2 {font-size:clamp(29px,8vw,36px)}
   .food-market-heading p {font-size:12px}
-  .food-market-intro strong {font-size:22px}
-  .food-market-all-link {min-height:42px;padding:9px 12px;font-size:10px}
-  .food-market-arrow {width:37px;height:37px;font-size:21px}
-  .food-market-card {flex-basis:195px;border-width:2px;box-shadow:4px 5px 0 #08624e}
-  .food-market-photo {padding:18px}
-  .food-market-card-body {padding:13px 12px;min-height:100px}
-  .food-market-card-body h3 {font-size:14px}
+  .food-market-grid {gap:16px 12px}
+  .food-market-card {border-width:2px;box-shadow:4px 5px 0 #08624e}
+  .food-market-photo {padding:10px;aspect-ratio:1.12}
+  .food-market-card-body {min-height:60px;padding:11px 10px}
+  .food-market-card-body h3 {font-size:12px}
+  .food-market-footer {margin-top:28px}
+  .food-market-all-link {min-height:45px;padding:11px 15px;font-size:10px}
   .food-market-section::after {height:36px}
 }
 @media (prefers-reduced-motion:reduce) {
   .food-market-section::before,.food-market-ornaments img {animation:none}
-  .food-market-card,.food-market-photo img,.food-market-all-link,.food-market-arrow {transition:none}
-  .food-market-grid {scroll-behavior:auto}
-}
-
-/* Final two-row responsive layout overrides */
-.food-market-arrows {display:flex;align-items:center;gap:11px}
-.food-market-arrow {display:grid;place-items:center;font-size:initial}
-.food-market-arrow svg {display:block;width:21px;height:21px}
-.food-market-footer {display:flex;justify-content:center;margin:33px auto 0}
-.food-market-all-link svg {display:block;width:20px;height:20px;flex:none}
-@media (max-width:900px) {
-  .food-market-grid {grid-template-columns:none;grid-auto-columns:205px;gap:17px}
-  .food-market-toolbar {align-items:center;justify-content:flex-end;flex-direction:row}
-}
-@media (max-width:750px) {
-  .food-market-toolbar {align-items:center;justify-content:flex-end;flex-direction:row;margin-bottom:16px}
-  .food-market-grid {grid-template-columns:none;grid-auto-columns:195px;grid-template-rows:repeat(2,minmax(0,1fr));grid-auto-flow:column;gap:14px 15px}
-  .food-market-card {min-height:260px}
-  .food-market-photo {aspect-ratio:1.3;padding:17px}
-  .food-market-footer {margin-top:28px}
-}
-@media (max-width:430px) {
-  .food-market-arrow {width:39px;height:39px}
-  .food-market-grid {grid-template-columns:none;grid-auto-columns:181px;gap:13px}
-  .food-market-card {min-height:252px}
-  .food-market-photo {padding:15px}
-  .food-market-footer {margin-top:24px}
-  .food-market-all-link {min-height:45px;padding:11px 15px;font-size:10px}
+  .food-market-card,.food-market-photo img,.food-market-all-link {transition:none}
 }
