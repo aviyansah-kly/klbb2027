@@ -638,7 +638,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .site-header .main-nav a { font-size:14px; white-space:nowrap }
   .site-header .nav-cta { display:flex; min-height:44px; font-size:11px; padding:8px 14px; margin-left:5px }
   .hero-figma { height:750px; min-height:0; padding:0 }
-  .hero-central { width:min(95%,540px); left:50%; top:clamp(80px,calc(550px - 80vw),150px); transform:translateX(-50%) }
+  .hero-central { width:min(95%,540px); left:50%; top:clamp(64px,calc(534px - 80vw),134px); transform:translateX(-50%) }
   .card-noah { --scatter-x:9%; --scatter-y:-16% }
   .card-syahrini { --scatter-x:-50%; --scatter-y:-10% }
   .card-hindia { --scatter-x:8%; --scatter-y:39% }
@@ -646,8 +646,8 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .card-naykilla { --scatter-x:53%; --scatter-y:-5% }
   .hero-figma-stage .hero-corner { width:63%; top:-12%; left:-26% }
   .hero-figma-stage .hero-plant { width:46%; top:67%; left:73% }
-  .hero-figma-stage .hero-drummer { width:49%; left:1%; top:63% }
-  .hero-figma-stage .hero-drum-shadow { width:48%; left:1%; top:85% }
+  .hero-figma-stage .hero-drummer { z-index:8; width:38%; left:2%; top:82% }
+  .hero-figma-stage .hero-drum-shadow { width:39%; left:1%; top:94% }
   .hero-figma-stage .hero-bolt-left { left:-2%; top:30%; width:20% }
   .hero-figma-stage .hero-bolt-right { left:81%; top:38%; width:19% }
   .hero-figma-stage .hero-spark-1 { left:7%; top:56%; width:6% }
