@@ -665,7 +665,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .hero-figma-stage .hero-decor-right-gold { left:66%; top:90%; width:92% }
   .hero-figma-stage .hero-decor-right-leaves { left:68%; top:67%; width:86% }
   .hero-figma-stage .hero-decor-right-edge { left:93%; top:32%; width:20% }
-  .hero-date-line { top:66%; left:0; width:100%; min-height:0; flex-wrap:nowrap; gap:4px; white-space:nowrap; font-size:clamp(13px,3.7vw,16px); letter-spacing:-.045em }
+  .hero-date-line { top:70%; left:0; width:100%; min-height:0; flex-wrap:nowrap; gap:4px; white-space:nowrap; font-size:clamp(13px,3.7vw,16px); letter-spacing:-.045em }
   .hero-year-bubbles { gap:2px }
   .hero-year-bubbles b { width:clamp(29px,8vw,35px); height:clamp(29px,8vw,35px); font-size:clamp(14px,4vw,18px) }
   .hero-extra-banner { left:1%; top:82%; width:98%; height:13% }
