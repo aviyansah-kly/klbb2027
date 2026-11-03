@@ -675,6 +675,10 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .hero-concept-note { bottom:2.5%; left:23%; right:4%; max-width:none; font-size:7px; text-align:right }
   .hero-figma .hero-bottom-cut { height:25px }
 }
+@media (max-width:420px) {
+  .hero-extra-banner { height:18% }
+  .hero-extra-banner p { line-height:1.12 }
+}
 @media (prefers-reduced-motion:reduce) {
   .hero-figma::before,.hero-figma-texture,.hero-card,.hero-card .artist-mask img,.hero-ornament,.hero-decor,.hero-ticket-sticker,.hero-event-details { animation:none !important }
   .hero-card { opacity:1; transform:none }
