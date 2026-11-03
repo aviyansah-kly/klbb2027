@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#112b99">
+  <meta name="description" content="KLBB 2027 Festival Playground — eksplorasi desain microsite KapanLagi Buka Bareng dengan aftermovie, lineup, dan pengalaman festival interaktif.">
+  <title>KLBB 2027 — KapanLagi Buka Bareng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-noah.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="lineup.css">
+  <link rel="stylesheet" href="rundown.css">
+  <link rel="stylesheet" href="sponsors.css">
+  <link rel="stylesheet" href="food-market.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="nav-wrap">
+      <a href="#top" class="brand" aria-label="Kembali ke atas">
+        <img src="assets/hero-klbb-logo.png" alt="KapanLagi Buka Bareng" width="73" height="42">
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Buka navigasi"><span></span><span></span></button>
+      <nav id="mainNav" class="main-nav" aria-label="Navigasi utama">
+        <a href="#lineup">Line Up</a>
+        <a href="#schedule">Rundown</a>
+        <a href="#food-market">Food Market</a>
+        <a href="#sponsored">Sponsors</a>
+        <a href="#media-partner">Media Partner</a>
+      </nav>
+      <button class="nav-cta" id="ticketOpen" type="button" aria-haspopup="dialog" aria-controls="ticketDialog">
+        <span>Beli Tiket</span>
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3a3 3 0 0 1 0-6V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2m0 4v2m0 4v2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero hero-figma section" aria-labelledby="heroTitle">
+      <h1 id="heroTitle" class="sr-only">KapanLagi Buka Bareng 2027 — Festival Playground</h1>
+      <div class="hero-figma-texture" aria-hidden="true"></div>
+      <div class="hero-figma-stage" id="heroStage">
+        <svg class="hero-decor-filter-definitions" width="0" height="0" aria-hidden="true" focusable="false">
+          <filter id="hero-decor-matte" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  2 2 2 0 -0.71" />
+          </filter>
+        </svg>
+        <!-- Additional ornament layers from the updated Figma hero; existing artwork stays in place. -->
+        <img class="hero-decor hero-decor-left-sprig" src="assets/klbb-shape7-export.png" alt="" aria-hidden="true">
+        <img class="hero-decor hero-decor-left-gold" src="assets/klbb-shape9-export.png" alt="" aria-hidden="true">
+        <img class="hero-decor hero-decor-left-leaves" src="assets/klbb-shape10-export.png" alt="" aria-hidden="true">
+        <img class="hero-decor hero-decor-bottom-left" src="assets/klbb-shape13-export.png" alt="" aria-hidden="true">
+        <img class="hero-decor hero-decor-bottom-wave" src="assets/klbb-shape11-export.png" alt="" aria-hidden="true">
+        <img class="hero-decor hero-decor-right-gold" src="assets/klbb-shape8-export.png" alt="" aria-hidden="true">
+        <img class="hero-decor hero-decor-right-leaves" src="assets/klbb-shape14-export.png" alt="" aria-hidden="true">
+        <img class="hero-decor hero-decor-right-edge" src="assets/klbb-shape12-export.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-corner" src="assets/hero-corner-yellow.webp" alt="" aria-hidden="true" decoding="async">
+        <img class="hero-ornament hero-plant" src="assets/hero-plant.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-drum-shadow" src="assets/hero-drum-shadow.svg" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-drummer" src="assets/hero-drummer.webp" alt="" aria-hidden="true" decoding="async">
+        <img class="hero-ornament hero-spark-1" src="assets/hero-spark-yellow.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-spark-2" src="assets/hero-spark-blue.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-spark-3" src="assets/hero-spark-pink.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-spark-4" src="assets/hero-spark-yellow.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-spark-5" src="assets/hero-spark-blue.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-spark-6" src="assets/hero-spark-pink.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-spark-7" src="assets/hero-spark-pink.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-bolt-left" src="assets/hero-thunder.png" alt="" aria-hidden="true">
+        <img class="hero-ornament hero-bolt-right" src="assets/hero-thunder.png" alt="" aria-hidden="true">
+
+        <div class="hero-central" id="heroCentral" aria-label="Kolase lima artis dari referensi Figma">
+          <div class="hero-card card-noah" style="--enter:.1s">
+            <img class="artist-shape noah-shape" src="assets/hero-noah-card.svg" alt="">
+            <div class="artist-mask noah-mask"><img src="assets/hero-noah.webp" alt="NOAH" fetchpriority="high" decoding="async"></div>
+            <img class="artist-word noah-word" src="assets/hero-noah-logo.png" alt="">
+          </div>
+          <div class="hero-card card-syahrini" style="--enter:.27s">
+            <img class="artist-shape syahrini-shape" src="assets/hero-syahrini-card.svg" alt="">
+            <div class="artist-mask syahrini-mask"><img src="assets/hero-syahrini.webp" alt="Syahrini" decoding="async"></div>
+            <img class="artist-word syahrini-word" src="assets/hero-syahrini-word.svg" alt="">
+          </div>
+          <div class="hero-card card-hindia" style="--enter:.39s">
+            <img class="artist-shape hindia-shape" src="assets/hero-hindia-card.svg" alt="">
+            <div class="artist-mask hindia-mask"><img src="assets/hero-hindia.webp" alt="Hindia" decoding="async"></div>
+            <img class="artist-word hindia-word" src="assets/hero-hindia-word.svg" alt="">
+          </div>
+          <div class="hero-card card-nassar" style="--enter:.52s">
+            <img class="artist-shape nassar-shape" src="assets/hero-nassar-card.svg" alt="">
+            <div class="artist-mask nassar-mask"><img src="assets/hero-nassar.webp" alt="King Nassar" decoding="async"></div>
+            <img class="artist-word nassar-word" src="assets/hero-nassar-word.svg" alt="">
+          </div>
+          <div class="hero-card card-naykilla" style="--enter:.66s">
+            <img class="artist-shape naykilla-shape" src="assets/hero-naykilla-card.svg" alt="">
+            <div class="artist-mask naykilla-mask"><img src="assets/hero-naykilla.webp" alt="Naykilla" decoding="async"></div>
+            <img class="artist-word naykilla-word" src="assets/hero-naykilla-word.svg" alt="">
+          </div>
+
+          <div class="hero-event-details">
+            <div class="hero-date-line"><span class="hero-year-bubbles" aria-label="27 dan 28"><b>27</b><b>28</b></span><strong>Februari 2026</strong><strong>Stadion Madya GBK</strong></div>
+            <div class="hero-extra-banner"><img src="assets/hero-extra-banner.svg" alt=""><p>NPD | Efek Rumah Kaca | The Adams | Vierra | Bernadya<br>Feel Koplo | Uzt. Dennis Liem | Reality Club | Adrian Khalif</p></div>
+            <button class="hero-ticket-sticker" id="heroTicketOpen" type="button" aria-haspopup="dialog" aria-controls="ticketDialog"><span>Beli Tiket Di Sini!</span><svg aria-hidden="true" viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 0 0 6v3a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-3a3 3 0 0 1 0-6V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2m0 4v2m0 4v2"/></svg></button>
+          </div>
+        </div>
+        <p class="hero-concept-note sr-only">Replika visual referensi Figma KLBB 2026 untuk eksplorasi microsite 2027; informasi acara bukan pengumuman resmi.</p>
+      </div>
+    </section>
+
+    <div class="marquee-band" aria-label="Music, friends, Ramadan, and good memories">
+      <div class="marquee-track" aria-hidden="true">
+        <span>BUKA BARENG <b>✳</b> NYANYI BARENG <b>✳</b> SERU-SERUAN <b>✳</b> RAMADAN VIBES <b>✳</b></span>
+        <span>BUKA BARENG <b>✳</b> NYANYI BARENG <b>✳</b> SERU-SERUAN <b>✳</b> RAMADAN VIBES <b>✳</b></span>
+      </div>
+    </div>
+
+    <section class="story-scroll" id="storyScroll" aria-label="Video aftermovie KapanLagi Buka Bareng sebelumnya">
+      <div class="story-pin">
+        <div class="story-video-shell" id="storyVideoShell">
+          <video id="storyVideo" class="story-video" autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/klbb-2025-poster.jpg" aria-label="Video aftermovie KapanLagi Buka Bareng sebelumnya, diputar otomatis tanpa suara">
+            <source src="assets/klbb-2025-aftermovie.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <div class="lineup-cover-stack" id="lineup">
+    <section class="lineup section" aria-labelledby="lineupTitle">
+      <div class="container">
+        <div class="section-heading lineup-heading reveal">
+          <h2 id="lineupTitle">LINE <span>UP</span></h2>
+        </div>
+        <div class="lineup-artist-list" id="lineupWall" aria-label="Daftar artis konsep KLBB 2027">
+          <div class="lineup-name-row">
+            <button class="lineup-artist reveal" type="button" data-artist="noah" data-color="#ff2182" aria-label="Lihat foto NOAH" aria-pressed="false"><span class="lineup-artist-label">NOAH</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#ff2182"><img src="assets/hero-noah.webp" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="syahrini" data-color="#04a9e8" aria-label="Lihat foto SYAHRINI" aria-pressed="false"><span class="lineup-artist-label">SYAHRINI</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#04a9e8"><img src="assets/hero-syahrini.webp" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="hindia" data-color="#05bf46" aria-label="Lihat foto HINDIA" aria-pressed="false"><span class="lineup-artist-label">HINDIA</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#05bf46"><img src="assets/hero-hindia.webp" alt="" loading="lazy"></span></button>
+          </div>
+          <div class="lineup-name-row">
+            <button class="lineup-artist reveal" type="button" data-artist="tulus" data-type="poster" data-color="#19cbb9" aria-label="Lihat foto TULUS" aria-pressed="false"><span class="lineup-artist-label">TULUS</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#19cbb9"><img src="assets/lineup-tulus.png" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="raisa" data-type="poster" data-color="#ff5b93" aria-label="Lihat foto RAISA" aria-pressed="false"><span class="lineup-artist-label">RAISA</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#ff5b93"><img src="assets/lineup-raisa.png" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="bernadya" data-type="editorial" data-color="#9163e7" aria-label="Lihat foto BERNADYA" aria-pressed="false"><span class="lineup-artist-label">BERNADYA</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#9163e7"><img src="assets/lineup-bernadya.jpg" alt="" loading="lazy"></span></button>
+          </div>
+          <div class="lineup-name-row">
+            <button class="lineup-artist reveal" type="button" data-artist="nadin-amizah" data-type="editorial" data-color="#e879c2" aria-label="Lihat foto NADIN AMIZAH" aria-pressed="false"><span class="lineup-artist-label">NADIN AMIZAH</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#e879c2"><img src="assets/lineup-nadin-amizah.jpg" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="idgitaf" data-type="poster" data-color="#ffe331" aria-label="Lihat foto IDGITAF" aria-pressed="false"><span class="lineup-artist-label">IDGITAF</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#ffe331"><img src="assets/lineup-idgitaf.png" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="for-revenge" data-type="poster" data-color="#ff8a41" aria-label="Lihat foto FOR REVENGE" aria-pressed="false"><span class="lineup-artist-label">FOR REVENGE</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#ff8a41"><img src="assets/lineup-for-revenge.png" alt="" loading="lazy"></span></button>
+          </div>
+          <div class="lineup-name-row">
+            <button class="lineup-artist reveal" type="button" data-artist="reality-club" data-type="editorial" data-color="#5dcdf5" aria-label="Lihat foto REALITY CLUB" aria-pressed="false"><span class="lineup-artist-label">REALITY CLUB</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#5dcdf5"><img src="assets/lineup-reality-club.jpg" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="barasuara" data-type="poster" data-color="#04b85e" aria-label="Lihat foto BARASUARA" aria-pressed="false"><span class="lineup-artist-label">BARASUARA</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#04b85e"><img src="assets/lineup-barasuara.png" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="lomba-sihir" data-type="poster" data-color="#adf15a" aria-label="Lihat foto LOMBA SIHIR" aria-pressed="false"><span class="lineup-artist-label">LOMBA SIHIR</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#adf15a"><img src="assets/lineup-lomba-sihir.png" alt="" loading="lazy"></span></button>
+          </div>
+          <div class="lineup-name-row">
+            <button class="lineup-artist reveal" type="button" data-artist="naykilla" data-color="#ffe331" aria-label="Lihat foto NAYKILLA" aria-pressed="false"><span class="lineup-artist-label">NAYKILLA</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#ffe331"><img src="assets/hero-naykilla.webp" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="nassar" data-color="#f3a02e" aria-label="Lihat foto KING NASSAR" aria-pressed="false"><span class="lineup-artist-label">KING NASSAR</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#f3a02e"><img src="assets/hero-nassar.webp" alt="" loading="lazy"></span></button>
+            <span class="lineup-dot" aria-hidden="true"></span>
+            <button class="lineup-artist reveal" type="button" data-artist="feel-koplo" data-type="poster" data-color="#ff733e" aria-label="Lihat foto FEEL KOPLO" aria-pressed="false"><span class="lineup-artist-label">FEEL KOPLO</span><span class="lineup-inline-photo" aria-hidden="true" style="--photo:#ff733e"><img src="assets/lineup-feel-koplo.png" alt="" loading="lazy"></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="lineup-outro" aria-hidden="true">
+        <img class="lineup-outro-leaf" src="assets/klbb-shape10-export.png" alt="">
+        <img class="lineup-outro-wave" src="assets/klbb-shape11-export.png" alt="">
+        <img class="lineup-outro-gold" src="assets/klbb-shape8-export.png" alt="">
+        <img class="lineup-outro-bolt" src="assets/hero-thunder.png" alt="">
+        <img class="lineup-outro-spark lineup-outro-spark-pink" src="assets/hero-spark-pink.png" alt="">
+        <img class="lineup-outro-spark lineup-outro-spark-yellow" src="assets/hero-spark-yellow.png" alt="">
+        <img class="lineup-outro-spark lineup-outro-spark-blue" src="assets/hero-spark-blue.png" alt="">
+      </div>
+      <div class="lineup-cursor-preview" id="lineupCursorPreview" aria-hidden="true">
+        <div class="lineup-preview-artwork">
+          <img class="lineup-preview-photo" data-for="noah" data-src="assets/hero-noah.webp" alt="" decoding="async">
+          <img class="lineup-preview-photo" data-for="syahrini" data-src="assets/hero-syahrini.webp" alt="" decoding="async">
+          <img class="lineup-preview-photo" data-for="hindia" data-src="assets/hero-hindia.webp" alt="" decoding="async">
+          <img class="lineup-preview-photo" data-for="naykilla" data-src="assets/hero-naykilla.webp" alt="" decoding="async">
+          <img class="lineup-preview-photo" data-for="nassar" data-src="assets/hero-nassar.webp" alt="" decoding="async">
+          <img class="lineup-preview-photo is-poster" data-for="tulus" data-src="assets/lineup-tulus.png" alt="" decoding="async">
+          <img class="lineup-preview-photo is-poster" data-for="raisa" data-src="assets/lineup-raisa.png" alt="" decoding="async">
+          <img class="lineup-preview-photo is-editorial" data-for="bernadya" data-src="assets/lineup-bernadya.jpg" alt="" decoding="async">
+          <img class="lineup-preview-photo is-editorial" data-for="nadin-amizah" data-src="assets/lineup-nadin-amizah.jpg" alt="" decoding="async">
+          <img class="lineup-preview-photo is-poster" data-for="idgitaf" data-src="assets/lineup-idgitaf.png" alt="" decoding="async">
+          <img class="lineup-preview-photo is-poster" data-for="for-revenge" data-src="assets/lineup-for-revenge.png" alt="" decoding="async">
+          <img class="lineup-preview-photo is-editorial" data-for="reality-club" data-src="assets/lineup-reality-club.jpg" alt="" decoding="async">
+          <img class="lineup-preview-photo is-poster" data-for="barasuara" data-src="assets/lineup-barasuara.png" alt="" decoding="async">
+          <img class="lineup-preview-photo is-poster" data-for="lomba-sihir" data-src="assets/lineup-lomba-sihir.png" alt="" decoding="async">
+          <img class="lineup-preview-photo is-poster" data-for="feel-koplo" data-src="assets/lineup-feel-koplo.png" alt="" decoding="async">
+        </div>
+        <div class="lineup-preview-caption"><span id="lineupPreviewName">NOAH</span></div>
+      </div>
+    </section>
+
+    <section class="schedule rundown-section section" id="schedule" aria-labelledby="scheduleTitle">
+      <div class="rundown-rings" aria-hidden="true"></div>
+      <div class="rundown-ornaments" aria-hidden="true">
+        <img class="rundown-decor rundown-decor-leaf-left" src="assets/klbb-shape10-export.png" alt="">
+        <img class="rundown-decor rundown-decor-leaf-right" src="assets/klbb-shape14-export.png" alt="">
+        <img class="rundown-decor rundown-decor-wave" src="assets/klbb-shape11-export.png" alt="">
+        <img class="rundown-decor rundown-decor-bolt" src="assets/hero-thunder.png" alt="">
+        <img class="rundown-decor rundown-decor-spark-pink" src="assets/hero-spark-pink.png" alt="">
+        <img class="rundown-decor rundown-decor-spark-blue" src="assets/hero-spark-blue.png" alt="">
+        <img class="rundown-decor rundown-decor-spark-yellow" src="assets/hero-spark-yellow.png" alt="">
+      </div>
+      <div class="container rundown-container">
+        <header class="rundown-heading reveal"><h2 id="scheduleTitle">RUNDOWN <span>ACARA</span></h2></header>
+        <div class="rundown-board reveal">
+          <div class="rundown-board-content">
+            <div class="rundown-board-aside">
+              <div class="schedule-tabs" role="tablist" aria-label="Pilih hari festival">
+                <button class="day-tab active" id="day1Tab" type="button" role="tab" aria-selected="true" aria-controls="timelineList" data-day="1">HARI <strong>01</strong><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></button>
+                <button class="day-tab" id="day2Tab" type="button" role="tab" aria-selected="false" aria-controls="timelineList" data-day="2">HARI <strong>02</strong><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></button>
+              </div>
+              <img class="rundown-aside-spark" src="assets/hero-spark-pink.png" alt="" aria-hidden="true">
+            </div>
+            <div class="rundown-board-main">
+              <div class="rundown-timeline-top"><span>JADWAL HARI <strong id="rundownDayLabel">01</strong></span></div>
+              <div class="timeline" id="timelineList" role="tabpanel" aria-labelledby="day1Tab"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <div class="rundown-marquee" aria-label="Buka bareng, nyanyi bareng, seru-seruan">
+      <div class="rundown-marquee-track" aria-hidden="true">
+        <span>BUKA BARENG <b>✳</b> NYANYI BARENG <b>✳</b> SERU-SERUAN <b>✳</b> FESTIVAL RAMADAN <b>✳</b></span>
+        <span>BUKA BARENG <b>✳</b> NYANYI BARENG <b>✳</b> SERU-SERUAN <b>✳</b> FESTIVAL RAMADAN <b>✳</b></span>
+      </div>
+    </div>
+
+    <section class="food-market-section section" id="food-market" aria-labelledby="foodMarketTitle">
+      <div class="food-market-ornaments" aria-hidden="true">
+        <img class="food-market-leaf-left" src="assets/klbb-shape10-export.png" alt="">
+        <img class="food-market-leaf-right" src="assets/klbb-shape14-export.png" alt="">
+        <img class="food-market-spark-one" src="assets/hero-spark-yellow.png" alt="">
+        <img class="food-market-spark-two" src="assets/hero-spark-pink.png" alt="">
+        <img class="food-market-bolt" src="assets/hero-thunder.png" alt="">
+      </div>
+      <div class="food-market-container">
+        <header class="food-market-heading reveal"><h2 id="foodMarketTitle">FOOD <span>MARKET</span></h2></header>
+        <div class="food-market-filters" role="group" aria-label="Filter makanan">
+          <button class="food-filter is-active" type="button" data-food-filter="all" aria-pressed="true">Semua</button>
+          <button class="food-filter" type="button" data-food-filter="berat" aria-pressed="false">Makanan Berat</button>
+          <button class="food-filter" type="button" data-food-filter="takjil" aria-pressed="false">Snack &amp; Takjil</button>
+          <button class="food-filter" type="button" data-food-filter="minuman" aria-pressed="false">Minuman</button>
+        </div>
+        <div class="food-market-grid" id="foodMarketGrid">
+          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:0ms"><div class="food-market-photo"><img src="assets/food-market-00.webp" alt="Nasi ayam geprek dengan sambal merah" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Ayam Geprek</h3><span>Makanan Berat</span></div></article>
+          <article class="food-market-card reveal" data-food-category="minuman" style="--card-delay:65ms"><div class="food-market-photo"><img src="assets/food-market-01.webp" alt="Es buah segar dengan potongan buah dan es" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Es Buah</h3><span>Minuman</span></div></article>
+          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:130ms"><div class="food-market-photo"><img src="assets/food-market-02.webp" alt="Sate ayam dengan bumbu kacang dan lontong" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Sate Ayam</h3><span>Makanan Berat</span></div></article>
+          <article class="food-market-card reveal" data-food-category="takjil" style="--card-delay:195ms"><div class="food-market-photo"><img src="assets/food-market-03.webp" alt="Klepon dan kue lapis warna-warni" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Jajanan Pasar</h3><span>Snack &amp; Takjil</span></div></article>
+          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:65ms"><div class="food-market-photo"><img src="assets/food-market-04.webp" alt="Burger daging dengan keju dan kentang goreng" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Burger &amp; Fries</h3><span>Makanan Berat</span></div></article>
+          <article class="food-market-card reveal" data-food-category="berat" style="--card-delay:130ms"><div class="food-market-photo"><img src="assets/food-market-05.webp" alt="Semangkuk bakso dan mi hangat" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Bakso &amp; Mie</h3><span>Makanan Berat</span></div></article>
+          <article class="food-market-card reveal" data-food-category="minuman" style="--card-delay:195ms"><div class="food-market-photo"><img src="assets/food-market-06.webp" alt="Es susu teh dengan boba" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Milk Tea</h3><span>Minuman</span></div></article>
+          <article class="food-market-card reveal" data-food-category="takjil" style="--card-delay:260ms"><div class="food-market-photo"><img src="assets/food-market-07.webp" alt="Martabak manis dengan cokelat dan keju" loading="lazy" decoding="async"></div><div class="food-market-card-body"><h3>Martabak Manis</h3><span>Snack &amp; Takjil</span></div></article>
+        </div>
+        <p class="sr-only" id="foodMarketFilterStatus" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section class="sponsor-section section" id="sponsored" aria-labelledby="sponsoredTitle">
+      <div class="sponsor-content">
+        <h2 id="sponsoredTitle">SPONSORED BY</h2>
+        <div class="sponsor-logos sponsor-logos-primary">
+          <img src="assets/figma-imgRectangle.png" alt="Fanta" loading="lazy" decoding="async" style="--logo-width:168px;--logo-height:120px">
+          <img src="assets/figma-imgRectangle1.png" alt="Kraft" loading="lazy" decoding="async" style="--logo-width:124px;--logo-height:48px">
+          <img src="assets/figma-imgRectangle2.png" alt="Giv Hijab" loading="lazy" decoding="async" style="--logo-width:81px;--logo-height:64px">
+          <img src="assets/figma-figma-FrisianFlag.png" alt="Frisian Flag" loading="lazy" decoding="async" style="--logo-width:89px;--logo-height:88px">
+          <img src="assets/figma-imgRectangle4.png" alt="Emeron Hijab" loading="lazy" decoding="async" style="--logo-width:108px;--logo-height:94px">
+        </div>
+        <div class="sponsor-logos sponsor-logos-secondary">
+          <img src="assets/figma-figma-Posh.png" alt="Posh" loading="lazy" decoding="async" style="--logo-width:84px;--logo-height:53px">
+          <img src="assets/figma-imgRectangle5.png" alt="Cornetto" loading="lazy" decoding="async" style="--logo-width:111px;--logo-height:111px">
+          <img src="assets/figma-imgRectangle6.png" alt="Lee Kum Kee" loading="lazy" decoding="async" style="--logo-width:108px;--logo-height:54px">
+          <img src="assets/figma-imgLogoYamahaGelap20251.png" alt="Yamaha" loading="lazy" decoding="async" style="--logo-width:98px;--logo-height:49px">
+          <img src="assets/figma-imgRectangle7.png" alt="Mie Sedaap" loading="lazy" decoding="async" style="--logo-width:203px;--logo-height:77px">
+          <img src="assets/figma-imgTehLemonMadu1.png" alt="Teh Lemon Madu" loading="lazy" decoding="async" style="--logo-width:101px;--logo-height:114px">
+          <img src="assets/figma-imgPrimaryLogoAquaR1.png" alt="Aqua" loading="lazy" decoding="async" style="--logo-width:145px;--logo-height:146px">
+        </div>
+        <h2 id="media-partner">MEDIA PARTNER:</h2>
+        <div class="media-logo-wall">
+          <div class="media-logo-row" data-row="1">
+            <img src="assets/figma-imgLiputan6.png" alt="Liputan6" loading="lazy" decoding="async" style="--logo-width:183px;--logo-height:51px">
+            <img src="assets/figma-imgFimela.png" alt="Fimela" loading="lazy" decoding="async" style="--logo-width:119px;--logo-height:51px">
+            <img src="assets/figma-imgKapanlagi.png" alt="KapanLagi" loading="lazy" decoding="async" style="--logo-width:156px;--logo-height:51px">
+            <img src="assets/figma-imgImage10.png" alt="Merdeka.com" loading="lazy" decoding="async" style="--logo-width:155px;--logo-height:51px">
+          </div>
+          <div class="media-logo-row" data-row="2">
+            <img src="assets/figma-imgBolacomPngFrame1.png" alt="Bola.com" loading="lazy" decoding="async" style="--logo-width:143px;--logo-height:51px">
+            <img src="assets/figma-imgBolanetPngFrame1.png" alt="Bola.net" loading="lazy" decoding="async" style="--logo-width:143px;--logo-height:51px">
+            <img src="assets/figma-imgImage12.png" alt="Brilio.net" loading="lazy" decoding="async" style="--logo-width:135px;--logo-height:51px">
+            <img src="assets/figma-imgImage13.png" alt="Female Daily" loading="lazy" decoding="async" style="--logo-width:205px;--logo-height:51px">
+          </div>
+          <div class="media-logo-row" data-row="3">
+            <img src="assets/figma-imgFemaleLifeCircleColor1.png" alt="Female Circle" loading="lazy" decoding="async" style="--logo-width:162px;--logo-height:51px">
+            <img src="assets/figma-imgImage11.png" alt="Hobby Konser" loading="lazy" decoding="async" style="--logo-width:111px;--logo-height:51px">
+            <img src="assets/figma-imgImage14.png" alt="Indosiar" loading="lazy" decoding="async" style="--logo-width:84px;--logo-height:51px">
+            <img src="assets/figma-imgImage15.png" alt="iSwara" loading="lazy" decoding="async" style="--logo-width:110px;--logo-height:51px">
+            <img src="assets/figma-imgKonserJakartaUtara1.png" alt="Konser Jakarta Utara" loading="lazy" decoding="async" style="--logo-width:115px;--logo-height:51px">
+            <img src="assets/figma-imgKonserPedia1.png" alt="Konser Pedia" loading="lazy" decoding="async" style="--logo-width:105px;--logo-height:51px">
+          </div>
+          <div class="media-logo-row" data-row="4">
+            <img src="assets/figma-imgHitam1.png" alt="AgendaEventID" loading="lazy" decoding="async" style="--logo-width:188px;--logo-height:51px">
+            <img src="assets/figma-imgObject.png" alt="Soal Konser" loading="lazy" decoding="async" style="--logo-width:125px;--logo-height:51px">
+            <img src="assets/figma-imgLogoDreamersWarnaHorizontalNewRevFinal1.png" alt="Dreamers" loading="lazy" decoding="async" style="--logo-width:169px;--logo-height:51px">
+            <img src="assets/figma-imgLogoJakartaMusicFest1.png" alt="Jakarta Music Fest" loading="lazy" decoding="async" style="--logo-width:114px;--logo-height:51px">
+          </div>
+          <div class="media-logo-row" data-row="5">
+            <img src="assets/figma-imgLogoGudangKonserJpg1.png" alt="Gudang Konser" loading="lazy" decoding="async" style="--logo-width:76px;--logo-height:51px">
+            <img src="assets/figma-imgLogoGenFm1.png" alt="Gen FM" loading="lazy" decoding="async" style="--logo-width:93px;--logo-height:51px">
+            <img src="assets/figma-imgImajiMediaBiru1.png" alt="Imaji Media" loading="lazy" decoding="async" style="--logo-width:96px;--logo-height:51px">
+            <img src="assets/figma-imgLogoInfoEventKonser1.png" alt="Info Event Konser" loading="lazy" decoding="async" style="--logo-width:88px;--logo-height:51px">
+            <img src="assets/figma-imgLogoJak1.png" alt="JAK" loading="lazy" decoding="async" style="--logo-width:91px;--logo-height:51px">
+            <img src="assets/figma-imgLogoJak2.png" alt="JAK FM" loading="lazy" decoding="async" style="--logo-width:55px;--logo-height:51px">
+            <img src="assets/figma-imgLogoSoalKonser1.png" alt="Soal Konser" loading="lazy" decoding="async" style="--logo-width:49px;--logo-height:51px">
+          </div>
+          <div class="media-logo-row" data-row="6">
+            <img src="assets/figma-imgSuaraCom1.png" alt="Suara.com" loading="lazy" decoding="async" style="--logo-width:199px;--logo-height:51px">
+            <img src="assets/figma-imgPanggilanKonser1.png" alt="Panggilan Konser" loading="lazy" decoding="async" style="--logo-width:85px;--logo-height:51px">
+            <img src="assets/figma-imgLogoOppalColour11.png" alt="Oppal" loading="lazy" decoding="async" style="--logo-width:125px;--logo-height:51px">
+            <img src="assets/figma-imgLogoSwaraNation1.png" alt="Swara Nation" loading="lazy" decoding="async" style="--logo-width:81px;--logo-height:51px">
+            <img src="assets/figma-imgWargaPanggung1.png" alt="Warga Panggung" loading="lazy" decoding="async" style="--logo-width:105px;--logo-height:51px">
+          </div>
+          <div class="media-logo-row" data-row="7">
+            <img src="assets/figma-imgLogoYouniverse1.png" alt="Youniverse" loading="lazy" decoding="async" style="--logo-width:104px;--logo-height:51px">
+            <img src="assets/figma-imgLogoYukKonserBlack1.png" alt="Yuk Konser" loading="lazy" decoding="async" style="--logo-width:108px;--logo-height:51px">
+            <img src="assets/figma-imgMoji1.png" alt="Moji" loading="lazy" decoding="async" style="--logo-width:108px;--logo-height:51px">
+            <img src="assets/figma-imgNgabKemayoran1.png" alt="Ngab Kemayoran" loading="lazy" decoding="async" style="--logo-width:118px;--logo-height:51px">
+            <img src="assets/figma-imgSonoraJakartaLogo1.png" alt="Sonora" loading="lazy" decoding="async" style="--logo-width:92px;--logo-height:51px">
+            <img src="assets/figma-imgVindesPrimaryLogo1.png" alt="Vindes" loading="lazy" decoding="async" style="--logo-width:73px;--logo-height:51px">
+          </div>
+          <div class="media-logo-row" data-row="8">
+            <img src="assets/figma-imgLogoYouniverse2.png" alt="RANS Entertainment" loading="lazy" decoding="async" style="--logo-width:122px;--logo-height:51px">
+            <img src="assets/figma-imgImage24.png" alt="Tempo" loading="lazy" decoding="async" style="--logo-width:130px;--logo-height:51px">
+            <img src="assets/figma-imgImage26.png" alt="Vidio" loading="lazy" decoding="async" style="--logo-width:113px;--logo-height:51px">
+            <img src="assets/figma-imgImage28.png" alt="SCTV" loading="lazy" decoding="async" style="--logo-width:115px;--logo-height:51px">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="klbb-footer-backdrop">
+  <footer class="klbb-footer">
+    <div class="klbb-footer-art" aria-hidden="true">
+      <img class="klbb-footer-texture" src="assets/figma-imgCircleTextureCopy2.png" alt="">
+      <img class="klbb-footer-leaf-left" src="assets/figma-imgShapeCopy9.png" alt="">
+      <img class="klbb-footer-leaf-right" src="assets/figma-imgShape4Copy3.png" alt="">
+      <img class="klbb-footer-yellow" src="assets/figma-imgShape3Copy2.png" alt="">
+      <img class="klbb-footer-spark-one" src="assets/figma-imgShapeCopy61.png" alt="">
+      <img class="klbb-footer-spark-two" src="assets/figma-imgShapeCopy31.png" alt="">
+      <img class="klbb-footer-spark-three" src="assets/figma-imgShapeCopy71.png" alt="">
+    </div>
+    <div class="klbb-footer-center">
+      <a href="#top" aria-label="Kembali ke atas"><img src="assets/figma-imgKlbb227.png" alt="KapanLagi Buka Bareng Festival 2027" width="208" height="120"></a>
+      <p>© Copyright KapanLagi Buka Bareng Festival 2027</p>
+    </div>
+  </footer>
+  </div>
+
+  <dialog class="ticket-dialog" id="ticketDialog" aria-labelledby="ticketDialogTitle" aria-describedby="ticketDialogDesc">
+    <div class="ticket-dialog-top"><img src="assets/hero-klbb-logo.png" alt="KapanLagi Buka Bareng" width="92" height="55"><button id="ticketClose" type="button" aria-label="Tutup informasi tiket"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button></div>
+    <h2 id="ticketDialogTitle">INFO <span>TIKET</span></h2>
+    <p id="ticketDialogDesc">Informasi penjualan tiket KLBB 2027 belum diumumkan.</p>
+    <button class="ticket-dialog-action" id="ticketDone" type="button">Mengerti</button>
+  </dialog>
+
+</body>
+</html>
