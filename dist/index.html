@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="sponsors.css">
   <link rel="stylesheet" href="food-market.css">
   <script src="tenant-data.js?v=klbb-tenant-20261103" defer></script>
-  <script src="app.js?v=foodmarket-20261103" defer></script>
+  <script src="app.js?v=foodmarket-2rows-20261103" defer></script>
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -255,17 +255,15 @@
           <p>Eksplor tenant favorit yang pernah meramaikan KLBB!</p>
         </header>
         <div class="food-market-toolbar">
-          <div class="food-market-intro"><span class="food-market-kicker">✳ KULINER PILIHAN FESTIVAL</span><strong>Jelajahi tenantnya</strong><span class="food-market-reference">Referensi KLBB 2026 · Lineup tenant 2027 segera diumumkan</span></div>
-          <div class="food-market-actions">
-            <div class="food-market-arrows" role="group" aria-label="Navigasi carousel tenant">
-              <button class="food-market-arrow" id="foodMarketPrev" type="button" aria-label="Geser tenant ke kiri">←</button>
-              <button class="food-market-arrow" id="foodMarketNext" type="button" aria-label="Geser tenant ke kanan">→</button>
-            </div>
-            <a class="food-market-all-link" href="./tenants.html">LIHAT SEMUA TENANT <span aria-hidden="true">↗</span></a>
+          <div class="food-market-arrows" role="group" aria-label="Navigasi daftar tenant">
+            <button class="food-market-arrow" id="foodMarketPrev" type="button" aria-label="Lihat tenant sebelumnya"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-left" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button class="food-market-arrow" id="foodMarketNext" type="button" aria-label="Lihat tenant berikutnya"><svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-right" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
           </div>
         </div>
-        <div class="food-market-grid" id="foodMarketGrid" aria-label="Tenant Food Market, geser horizontal untuk melihat lainnya" tabindex="0"></div>
-        <p class="food-market-swipe-hint">← GESER UNTUK EKSPLOR TENANT LAINNYA →</p>
+        <div class="food-market-grid" id="foodMarketGrid" aria-label="Tenant Food Market dalam dua baris, geser horizontal untuk melihat lainnya" tabindex="0"></div>
+        <div class="food-market-footer">
+          <a class="food-market-all-link" href="./tenants.html">LIHAT SEMUA TENANT <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-up-right" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10M7 17 17 7"/></svg></a>
+        </div>
       </div>
     </section>
 
