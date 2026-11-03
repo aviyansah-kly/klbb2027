@@ -646,7 +646,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .card-naykilla { --scatter-x:53%; --scatter-y:-5% }
   .hero-figma-stage .hero-corner { width:63%; top:-12%; left:-26% }
   .hero-figma-stage .hero-plant { width:46%; top:67%; left:73% }
-  .hero-figma-stage .hero-drummer { z-index:8; width:38%; left:2%; top:82% }
+  .hero-figma-stage .hero-drummer { z-index:8; width:min(38%,145px); left:2%; top:calc(100% - 136px) }
   .hero-figma-stage .hero-drum-shadow { width:39%; left:1%; top:94% }
   .hero-figma-stage .hero-bolt-left { left:-2%; top:30%; width:20% }
   .hero-figma-stage .hero-bolt-right { left:81%; top:38%; width:19% }
