@@ -178,9 +178,9 @@
   .site-header .main-nav {top:70px;left:0;right:0}
   .site-header .nav-cta {min-width:0;margin-left:auto;margin-right:8px;padding:9px 10px;font-size:11px;gap:5px}
   .site-header .nav-cta svg {width:15px;height:15px}
-  .hero-ticket-sticker {top:91.8%;padding:10px 14px;gap:7px;box-shadow:3px 4px 0 #ff3288}
-  .hero-ticket-sticker span {font-size:clamp(12px,3.3vw,15px)}
-  .hero-ticket-sticker svg {width:16px;height:16px}
+  .hero-ticket-sticker {top:98%;min-height:52px;max-width:88%;padding:14px 21px;gap:9px;box-shadow:4px 5px 0 #ff3288}
+  .hero-ticket-sticker span {font-size:clamp(15px,3.9vw,17px)}
+  .hero-ticket-sticker svg {width:19px;height:19px}
   .lineup-cover-stack > .rundown-section {clip-path:polygon(0 0,100% 18px,100% 100%,0 100%);margin-top:-20px}
   .lineup-heading {margin-bottom:28px}
   .lineup-heading h2 {font-size:clamp(27px,7vw,36px)}
