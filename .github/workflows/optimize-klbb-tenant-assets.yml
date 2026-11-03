@@ -48,5 +48,6 @@ jobs:
             echo "Tenant logos already optimized"
           else
             git commit -m "perf(food market): optimize tenant logo file sizes"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
