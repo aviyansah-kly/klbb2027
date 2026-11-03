@@ -9,4 +9,9 @@ Source snapshot of the KLBB 2027 public microsite, originally developed with Cha
 
 This repository is a separate working copy. The original ChatGPT Sites project remains unchanged and online.
 
-> The 2027 Rundown times in the source have not yet been updated; the source snapshot preserves v19. Proposed schedule times require organizer confirmation before public release.
+## Current preview state
+
+- Rundown: two-day interactive schedule with proposed WIB time slots; organizer confirmation is still required before treating the schedule as final.
+- Food Market: one-row scrolling tenant carousel on the home page, linking to `dist/tenants.html` with searchable 39-tenant index.
+- Tenant names/logos: reference assets from KLBB 2026 Figma; **not a confirmed 2027 tenant lineup**. Three original wordmarks were provided as text rather than image logos. Order links are intentionally not published until official URLs are confirmed.
+- Source: continue editing `dist/`. Cloudflare Pages should use `dist` as its output directory.
