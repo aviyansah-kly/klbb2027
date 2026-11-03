@@ -671,9 +671,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--yellow); outline-
   .hero-year-bubbles b { width:clamp(29px,8vw,35px); height:clamp(29px,8vw,35px); font-size:clamp(14px,4vw,18px) }
   .hero-extra-banner { left:1%; top:82%; width:98%; height:12% }
   .hero-extra-banner p { font-size:clamp(9px,2.6vw,11px); margin:0 3%; letter-spacing:-.045em; white-space:normal }
-  .hero-ticket-sticker { left:20%; top:98%; width:60%; height:14% }
-  .hero-ticket-sticker span { font-size:clamp(14px,3.7vw,17px); letter-spacing:-.065em }
-  .hero-ticket-sticker svg { width:18px; height:18px }
+
   .hero-concept-note { bottom:2.5%; left:23%; right:4%; max-width:none; font-size:7px; text-align:right }
   .hero-figma .hero-bottom-cut { height:25px }
 }
